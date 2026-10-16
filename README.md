@@ -7,7 +7,7 @@ BUD documents the historical operationalization of **Strategic Services** and **
 
 Operational Management initiated the business-unit concept. The administrator designed and coordinated the practical operating structure in consultation with management, while independently evaluating quotations, selling prices, project-specific cost components, and delivery terms. Existing Purchasing, Warehouse, Invoicing, and Finance departments retained ownership of their ERP transactions.
 
-**Confirmed administrative scope (16 October 2026):** BUD begins upon receipt of an approved customer PO. Pre-award sales tracking and pricing decisions remain part of the historical experience but outside the BUD administrative KPI model. The uploaded v0.7 workbook is a historical prototype and may still contain legacy pre-award sheets; it is not yet a fully aligned implementation of this scope.
+**Confirmed administrative scope (16 October 2026):** BUD begins upon receipt of an approved customer PO. Pre-award sales tracking and pricing decisions remain part of the historical experience but outside the BUD administrative KPI model. The PO-aligned 20-sheet workbook is now uploaded as the current prototype. The original 21-sheet workbook remains archived in the repository for comparison.
 
 The workbook is a **portfolio prototype with fictional data**. It has **no live ERP connection**, no reconciliation to real ERP exports, and is **not** an accounting system or a statutory financial reporting model.
 
@@ -16,7 +16,7 @@ The workbook is a **portfolio prototype with fictional data**. It has **no live 
 - **[Data dictionary and reporting controls](docs/BUD_v0_7_Data_Dictionary.md)** — metric definitions, reporting grain, expected ERP mapping and quality controls
 - **[Workbook user guide and reporting methodology](docs/BUD_v0_7_Workbook_Guide.md)** — navigation, limitations and reporting rules
 
-**Workbook:** [BUD Management Reporting v0.7 — Excel prototype](BUD_Management_Reporting_v0_7_review%20(1).xlsx) (21 sheets, two illustrative reporting months; fictional data). The filename includes `(1)` because of the uploaded filename; this does not change the model's status or validation limitations.
+**Current workbook:** [BUD Management Reporting v0.7 — PO Aligned](BUD_Management_Reporting_v0_7_PO_Aligned%20(1).xlsx) (20 sheets; fictional data; PO-based administrative scope). A second upload, [`(2)`](BUD_Management_Reporting_v0_7_PO_Aligned%20(2).xlsx), has identical Git blob SHA and is a duplicate. **Historical workbook:** [original v0.7 review](BUD_Management_Reporting_v0_7_review%20(1).xlsx) (21 sheets, includes legacy pre-award content). The duplicate and historical workbook are retained for now; they are not the current reporting baseline.
 
 ## Binational operating model (Mexico–USA)
 The historical operating context included two selling entities, Mexico and USA, and cross-border procurement. When Mexico sold goods purchased through the US company, the US entity bought from the external supplier and acted as a supplier to Mexico. Mexico issued an intercompany purchase order, imported and received the goods, and used its own ERP records for project cost tracking.
