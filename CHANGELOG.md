@@ -12,3 +12,5 @@
 - Recorded limitation: workbook does not authenticate or verify documentary approval, dates, approvers or audit trail for PO amendments; these require upstream control and future production workflow.
 - Confirmed GitHub upload of PO-aligned workbook, removed an exact duplicate upload, and updated README and guide to distinguish current and historical versions.
 - Deferred to future development: Power BI v0.8, ERP integration and reconciliation, amendment approval evidence and FX policy.
+
+- [Sprint activity log and plan-versus-actual closeout](docs/BUD_Sprint_Activity_Log_2026-10-16.md) records deliverables, acceptance boundaries, deviations and deferred backlog.
