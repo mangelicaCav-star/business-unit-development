@@ -21,6 +21,9 @@ Translate the BUD management-reporting prototype into an interactive executive a
 
 Use relationships and measures rather than summing already-aggregated Excel reporting sheets. If multiple invoice dates, customer PO amendments or cost events occur within one month, an eventual production model may require transaction-level fact tables rather than relying solely on the illustrative project-month aggregate.
 
+## Administrative entry criterion
+Only projects with an approved customer PO enter the BUD operational reporting model. Sales pre-award tracking, quotation values, proposed prices, target/effective markup and pre-award margin are excluded from Power BI KPIs. Authorized PO value includes approved amendments; it must remain distinct from invoiced value. Preserve Sales' historical pricing responsibility as professional context, not as an administrative measure.
+
 ## Measure caveats
 - Order intake: new approved customer POs plus net approved revisions in month.
 - Invoicing: invoices issued in month.
