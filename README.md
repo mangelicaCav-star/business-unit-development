@@ -1,16 +1,41 @@
 # BUD — Business Unit Development & Operational Implementation
 
-**Independent professional portfolio | Business Operations · Procurement · Commercial Development · Global Sourcing**
+**Professional portfolio | Business Operations · Procurement · Commercial Development · Global Sourcing · Management Reporting**
 
 ## Overview
-A retrospective case study of developing a new Strategic Services business unit inside an established industrial company. Operational Management initiated the business unit in response to customer requests for third-party purchasing services. The administrator was tasked with making it operational, using existing departments and infrastructure.
+BUD documents the historical operationalization of **Strategic Services** and **Brands** business units within an established industrial company, and presents a separate **v0.7 management-reporting workbook prototype** informed by that experience.
 
-Complementary case studies document the introduction of Ohtake, the assessment of a Rittal opportunity that did not result in an agreement, and international sourcing from China that led to containerized purchases and delivery for resale.
+Operational Management initiated the business-unit concept. The administrator designed and coordinated the practical operating structure in consultation with management, while independently evaluating quotations, selling prices, project-specific cost components, and delivery terms. Existing Purchasing, Warehouse, Invoicing, and Finance departments retained ownership of their ERP transactions.
 
-## Business challenge
-Build repeatable project-based commercial operations across supplier sourcing, costing, Purchasing, cross-border logistics, Warehouse, Invoicing and financial reconciliation without duplicating corporate functions.
+The workbook is a **portfolio prototype with fictional data**. It has **no live ERP connection**, no reconciliation to real ERP exports, and is **not** an accounting system or a statutory financial reporting model.
 
-## Documentation
+## Portfolio deliverables
+- **[Management-reporting case study](docs/BUD_v0_7_Portfolio_Case_Study.md)** — historical context, responsibilities, design decisions and evidence boundaries
+- **[Data dictionary and reporting controls](docs/BUD_v0_7_Data_Dictionary.md)** — metric definitions, reporting grain, expected ERP mapping and quality controls
+- **[Workbook user guide and reporting methodology](docs/BUD_v0_7_Workbook_Guide.md)** — navigation, limitations and reporting rules
+
+**Workbook:** `BUD_Management_Reporting_v0_7_review.xlsx` (21 sheets, two illustrative reporting months). The workbook is available separately until its binary file is uploaded to this repository; the documentation here does not imply that the Excel file has been published.
+
+## Reporting architecture
+1. **ERP Snapshot / Project Control / Exceptions** — weekly management monitoring and critical-incident updates; the ERP assigns official Project IDs.
+2. **Quotation Register / Pricing & Margin** — independent, brand-specific pre-award commercial decisions.
+3. **Project History** — historical project master: customer, business unit, brand and selling entity.
+4. **Monthly Project Activity** — period-level customer order intake, invoices, paid investment, outstanding investment and ERP-recognized costs.
+5. **Monthly BU Close / Monthly Brand Detail** — management consolidation by business unit, brand and selling entity (Mexico or USA).
+6. **Management Report / Monthly Trend / BU Entity Matrix** — monthly reporting and illustrative trends.
+
+**Scope:** Strategic Services and Brands. Automation and Machining existed in the company but are **outside the administrator's operational scope** in this case study.
+
+## Critical business rules
+- Brands are **subdivisions of the Brands business unit**, not separate business units. One brand per quotation is the operating design; a customer may still combine quotations in a single PO, requiring careful cross-referencing without double counting.
+- **Business Unit**, **Brand**, and **Selling Entity (MX/USA)** are distinct reporting dimensions.
+- Customer PO **order intake** is separate from invoicing. Net approved PO revisions are attributed to the applicable period.
+- **Investment 1** (paid disbursements), **Investment 2** (month-end unpaid exposure) and **ERP recognized costs** are separate metrics; they must not be summed as independent costs.
+- Where Mexico sells goods sourced through the US entity, the US company acts as Mexico's supplier. The MX-side ERP purchase/import record supports the MX project cost; the original US external supplier purchase is not counted again in that project.
+- Monthly invoicing less monthly ERP recognized costs is **timing-sensitive** and is **not definitive project profit**.
+- Sample USD amounts are assumed pre-normalized; the actual exchange-rate policy is unresolved.
+
+## Original case documentation
 - [Business mandate and scope](docs/01_Business_Mandate_and_Scope.md)
 - [Operating model and architecture](docs/02_Operating_Model_and_Process_Architecture.md)
 - [Roles and responsibilities](docs/03_Roles_and_Responsibilities.md)
@@ -24,14 +49,7 @@ Build repeatable project-based commercial operations across supplier sourcing, c
 - [Fictional validation scenarios](examples/Simulated_Project_Scenarios.md)
 
 ## Evidence and attribution
-**Historical practices** and **self-reported outcomes** are reconstructed from firsthand professional experience, not independently audited. **Proposed controls** and planned prototype features are explicitly identified as future work.
-
-The administrator did not originate the management initiative, supervise Engineering, perform the Purchasing/Warehouse/Invoicing departments' formal transactions or create the existing brand-distribution line.
-
-No confidential employer, customer, supplier or ERP records are published. No unsupported revenue, ROI, savings or growth figures are claimed.
-
-## Project status
-**v0.1 — documentation only.** No Excel or software prototype has been implemented or validated in this repository.
+Historical practices are reconstructed from firsthand experience, not independently audited. The portfolio makes no unsupported claims about revenue, ROI, savings or deployment. No confidential employer, customer, supplier or ERP records are published. The prototype demonstrates a proposed reporting architecture rather than verified production performance.
 
 ## Related project
-[EVOF — Procurement Operations Framework](https://github.com/mangelicaCav-star/procurement-operations-framework) is a separate portfolio project focused on procurement improvements and data governance, not a historical deployment of BUD.
+[EVOF — Procurement Operations Framework](https://github.com/mangelicaCav-star/procurement-operations-framework) is an independent procurement-improvement and data-governance portfolio project, not a historical deployment of BUD.
