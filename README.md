@@ -14,7 +14,7 @@ The workbook is a **portfolio prototype with fictional data**. It has **no live 
 - **[Data dictionary and reporting controls](docs/BUD_v0_7_Data_Dictionary.md)** — metric definitions, reporting grain, expected ERP mapping and quality controls
 - **[Workbook user guide and reporting methodology](docs/BUD_v0_7_Workbook_Guide.md)** — navigation, limitations and reporting rules
 
-**Workbook:** `BUD_Management_Reporting_v0_7_review.xlsx` (21 sheets, two illustrative reporting months). The workbook is available separately until its binary file is uploaded to this repository; the documentation here does not imply that the Excel file has been published.
+**Workbook:** [BUD Management Reporting v0.7 — Excel prototype](BUD_Management_Reporting_v0_7_review%20(1).xlsx) (21 sheets, two illustrative reporting months; fictional data). The filename includes `(1)` because of the uploaded filename; this does not change the model's status or validation limitations.
 
 ## Binational operating model (Mexico–USA)
 The historical operating context included two selling entities, Mexico and USA, and cross-border procurement. When Mexico sold goods purchased through the US company, the US entity bought from the external supplier and acted as a supplier to Mexico. Mexico issued an intercompany purchase order, imported and received the goods, and used its own ERP records for project cost tracking.
