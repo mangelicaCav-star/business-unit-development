@@ -41,3 +41,7 @@ Project ID, customer, BU, brand, selling entity, original currency, authorized P
 6. A documented FX policy is required before importing mixed-currency real transactions.
 
 **Validation boundary:** The workbook's sample figures are illustrative; no real ERP reconciliation or live automation is claimed.
+
+
+## Scope clarification — 16 October 2026
+The BUD administrative reporting boundary begins with receipt of an approved customer PO. Customer PO authorized value plus approved amendments is the project commercial baseline. Sales-owned pre-award quotation/pricing/markup/margin fields must not feed BUD management KPIs. Keep authorized PO value, cumulative invoicing, unpaid exposure, paid investment and ERP-recognized costs separately defined; do not treat PO value as realized revenue or sum overlapping cost/payment measures. Published v0.7 workbook remains a legacy prototype pending structural revision.
