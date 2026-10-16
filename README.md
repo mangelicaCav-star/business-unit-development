@@ -11,6 +11,9 @@ Operational Management initiated the business-unit concept. The administrator de
 
 The workbook is a **portfolio prototype with fictional data**. It has **no live ERP connection**, no reconciliation to real ERP exports, and is **not** an accounting system or a statutory financial reporting model.
 
+## Sprint closeout — 16 October 2026
+The v0.7 PO-aligned prototype is published as the current portfolio workbook. Three fictional functional scenarios were reported as passed: approved PO amount change, additional partial invoicing, and cost exposure exceeding PO. These demonstrate arithmetic and alert behavior only; no real ERP data or documentary approval workflow was validated. The workbook does **not** independently verify approval of PO amendments. This limitation and the future production control requirements are documented in the [Workbook Guide](docs/BUD_v0_7_Workbook_Guide.md). Next-phase items: Power BI v0.8, ERP field mapping/reconciliation, approved-amendment evidence, and FX policy. See [CHANGELOG](CHANGELOG.md).
+
 ## Portfolio deliverables
 - **[Management-reporting case study](docs/BUD_v0_7_Portfolio_Case_Study.md)** — historical context, responsibilities, design decisions and evidence boundaries
 - **[Data dictionary and reporting controls](docs/BUD_v0_7_Data_Dictionary.md)** — metric definitions, reporting grain, expected ERP mapping and quality controls
