@@ -9,11 +9,14 @@ Demonstrate an internal, ERP-aligned project management and monthly reporting mo
 ## Suggested walkthrough
 1. Start with **Guide**, **Settings** and **Reporting Methodology**.
 2. Review **Project History** for the ERP-assigned Project ID, customer, BU, brand and selling entity.
-3. Inspect **Quotation Register** and **Pricing & Margin** for brand-specific pre-award commercial decisions.
+3. Establish the approved **Customer PO** and approved amendments as the authorized commercial baseline. **Quotation Register** and **Pricing & Margin** are legacy pre-award prototype sheets, outside the confirmed BUD administration scope; do not use them for management KPIs.
 4. Review **ERP Snapshot**, **Project Control** and **Exceptions** for weekly project management.
 5. Inspect **Monthly Project Activity** for project-month inputs.
 6. Open **Monthly BU Close** and **Monthly Brand Detail** to see groupings.
 7. On **Management Report**, choose a sample period in B2, then review **Monthly Trend** and **BU Entity Matrix**.
+
+## Scope correction — 16 October 2026
+BUD administrative monitoring starts only after an approved customer PO is received. Sales owns prospecting, quotations, pricing proposals, negotiations, and pre-award margin analysis. Administrative reporting must use authorized PO value and amendments, invoices, ERP-recognized cost, paid disbursements and unpaid exposure. PO value is not invoicing or realized profit. The currently published v0.7 workbook has not yet been structurally purged of legacy pre-award sheets.
 
 ## Definitions
 - **Order intake:** customer POs received plus net approved revisions in the reporting month; not invoicing.
@@ -29,4 +32,4 @@ MX and USA are selling entities, not business units. Brands are a subdivision of
 **Assumptions:** Sample values are already in USD. Actual FX policy, real ERP field mapping, completeness controls and real-data reconciliation remain outside the current prototype.
 
 ## Publication note
-The documentation can be published independently of the workbook binary. Until the .xlsx is uploaded to the repository, avoid presenting it as a GitHub-hosted downloadable asset.
+The v0.7 Excel workbook is uploaded in the repository under `BUD_Management_Reporting_v0_7_review (1).xlsx`. It is a historical prototype pending structural alignment to the revised PO-based administrative scope.
