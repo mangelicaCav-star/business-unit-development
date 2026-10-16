@@ -7,6 +7,8 @@ BUD documents the historical operationalization of **Strategic Services** and **
 
 Operational Management initiated the business-unit concept. The administrator designed and coordinated the practical operating structure in consultation with management, while independently evaluating quotations, selling prices, project-specific cost components, and delivery terms. Existing Purchasing, Warehouse, Invoicing, and Finance departments retained ownership of their ERP transactions.
 
+**Confirmed administrative scope (16 October 2026):** BUD begins upon receipt of an approved customer PO. Pre-award sales tracking and pricing decisions remain part of the historical experience but outside the BUD administrative KPI model. The uploaded v0.7 workbook is a historical prototype and may still contain legacy pre-award sheets; it is not yet a fully aligned implementation of this scope.
+
 The workbook is a **portfolio prototype with fictional data**. It has **no live ERP connection**, no reconciliation to real ERP exports, and is **not** an accounting system or a statutory financial reporting model.
 
 ## Portfolio deliverables
@@ -34,7 +36,7 @@ Proposed report pages: Executive Overview; Business Unit Performance; MX/USA Ope
 
 ## Reporting architecture
 1. **ERP Snapshot / Project Control / Exceptions** — weekly management monitoring and critical-incident updates; the ERP assigns official Project IDs.
-2. **Quotation Register / Pricing & Margin** — independent, brand-specific pre-award commercial decisions.
+2. **Customer PO authorization boundary** — BUD administration begins with an approved customer purchase order. Sales owns pre-award quotations, negotiation and pricing; quotation KPIs are excluded from BUD operational reporting.
 3. **Project History** — historical project master: customer, business unit, brand and selling entity.
 4. **Monthly Project Activity** — period-level customer order intake, invoices, paid investment, outstanding investment and ERP-recognized costs.
 5. **Monthly BU Close / Monthly Brand Detail** — management consolidation by business unit, brand and selling entity (Mexico or USA).
@@ -45,6 +47,7 @@ Proposed report pages: Executive Overview; Business Unit Performance; MX/USA Ope
 ## Critical business rules
 - Brands are **subdivisions of the Brands business unit**, not separate business units. One brand per quotation is the operating design; a customer may still combine quotations in a single PO, requiring careful cross-referencing without double counting.
 - **Business Unit**, **Brand**, and **Selling Entity (MX/USA)** are distinct reporting dimensions.
+- **Scope boundary:** pre-award quotation, proposed price, target/effective markup and quotation margin are Sales activities, not BUD administrative KPIs. The approved customer PO and approved amendments establish authorized project value.
 - Customer PO **order intake** is separate from invoicing. Net approved PO revisions are attributed to the applicable period.
 - **Investment 1** (paid disbursements), **Investment 2** (month-end unpaid exposure) and **ERP recognized costs** are separate metrics; they must not be summed as independent costs.
 - Where Mexico sells goods sourced through the US entity, the US company acts as Mexico's supplier. The MX-side ERP purchase/import record supports the MX project cost; the original US external supplier purchase is not counted again in that project.
