@@ -16,6 +16,22 @@ The workbook is a **portfolio prototype with fictional data**. It has **no live 
 
 **Workbook:** `BUD_Management_Reporting_v0_7_review.xlsx` (21 sheets, two illustrative reporting months). The workbook is available separately until its binary file is uploaded to this repository; the documentation here does not imply that the Excel file has been published.
 
+## Binational operating model (Mexico–USA)
+The historical operating context included two selling entities, Mexico and USA, and cross-border procurement. When Mexico sold goods purchased through the US company, the US entity bought from the external supplier and acted as a supplier to Mexico. Mexico issued an intercompany purchase order, imported and received the goods, and used its own ERP records for project cost tracking.
+
+The portfolio demonstrates **binational commercial and supply-chain coordination**, intercompany purchasing workflow awareness, import-related process visibility, and management reporting segmented by selling entity. It **does not** claim ownership of corporate accounting, legal consolidation, or intercompany eliminations.
+
+## Power BI reporting opportunity
+The v0.7 Excel model is a suitable **conceptual source for a future Power BI report**, but **no Power BI dashboard or validated data pipeline has been built**.
+
+Recommended semantic model:
+- **FactProjectMonthlyActivity:** project-month commercial and cost movements, with separate month-end outstanding balances
+- **DimProject:** ERP Project ID, customer, business unit, brand, selling entity
+- **DimDate:** reporting calendar and fiscal periods
+- Optional controlled dimensions for **Business Unit**, **Brand**, and **Selling Entity**
+
+Proposed report pages: Executive Overview; Business Unit Performance; MX/USA Operations; Brand Performance; Project Profitability; Monthly Trends. Import the underlying project/month activity and dimensions, **not** all workbook summary sheets as independent fact tables. Actual deployment requires ERP extract mapping, FX policy, unique identifiers, and internal reconciliation checks.
+
 ## Reporting architecture
 1. **ERP Snapshot / Project Control / Exceptions** — weekly management monitoring and critical-incident updates; the ERP assigns official Project IDs.
 2. **Quotation Register / Pricing & Margin** — independent, brand-specific pre-award commercial decisions.
