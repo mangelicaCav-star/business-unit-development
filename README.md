@@ -14,6 +14,11 @@ The workbook is a **portfolio prototype with fictional data**. It has **no live 
 ## Sprint closeout — 16 October 2026
 The v0.7 PO-aligned prototype is published as the current portfolio workbook. Three fictional functional scenarios were reported as passed: approved PO amount change, additional partial invoicing, and cost exposure exceeding PO. These demonstrate arithmetic and alert behavior only; no real ERP data or documentary approval workflow was validated. The workbook does **not** independently verify approval of PO amendments. This limitation and the future production control requirements are documented in the [Workbook Guide](docs/BUD_v0_7_Workbook_Guide.md). Next-phase items: Power BI v0.8, ERP field mapping/reconciliation, approved-amendment evidence, and FX policy. See [CHANGELOG](CHANGELOG.md) and [Sprint activity log / plan-versus-actual closeout](docs/BUD_Sprint_Activity_Log_2026-10-16.md).
 
+
+## Validation workstream — 20 October 2026
+
+The [PO amendment and financial integrity test protocol](docs/BUD_PO_Amendment_and_Financial_Integrity_Test_Plan_2026-10-20.md) defines 13 deterministic acceptance cases for authorized PO changes, partial receipts and invoicing, duplicate prevention, project-cost semantics and FX exceptions. **All 13 new cases are NOT RUN**; this is a test specification, not new validation evidence. The earlier three fictional scenario results remain historical and were not re-executed. See the [sprint update](docs/BUD_Sprint_Update_2026-10-20.md) for status and the next execution block.
+
 ## Portfolio deliverables
 - **[Management-reporting case study](docs/BUD_v0_7_Portfolio_Case_Study.md)** — historical context, responsibilities, design decisions and evidence boundaries
 - **[Data dictionary and reporting controls](docs/BUD_v0_7_Data_Dictionary.md)** — metric definitions, reporting grain, expected ERP mapping and quality controls
