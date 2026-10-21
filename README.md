@@ -92,3 +92,7 @@ Historical practices are reconstructed from firsthand experience, not independen
 ## Process documentation for future orchestration (2026-10-20)
 
 [Process & Automation Readiness Log](docs/PROCESS_AUTOMATION_LOG.md) records process-level inputs, rules, responsibilities, outputs, validation evidence, exceptions, and possible future agent/tool orchestration. This is **documentation only**: it does not introduce AI agents, replace functional testing, or claim completed manual integration with the other project. Process records will be refined as functional sprints close.
+
+### Corrective workbook publication — 2026-10-21
+
+**BUD v0.7.1 FX Reporting Corrected** is published at [BUD_Management_Reporting_v0_7_1_FX_Reporting_Corrected_LOCAL.xlsx](BUD_Management_Reporting_v0_7_1_FX_Reporting_Corrected_LOCAL.xlsx) (original `_LOCAL` filename retained). Prior v0.7 files remain in the repository unchanged. The correction propagates provisional FX status to consolidated reporting; see [validation status](docs/BUD_Validation_Status_2026-10-20.md). Local automated consolidated checks passed in the modeled scenarios, but the final v0.7.1 workbook has **not** completed an Excel 365 desktop regression. Transaction-grain receipt/invoice matching and real ERP/finance reconciliation remain outside verified scope. This is a portfolio prototype, **not a production-approved financial control**.
