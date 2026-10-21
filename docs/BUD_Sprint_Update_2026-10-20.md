@@ -1,25 +1,31 @@
-# BUD — Sprint Update | 2026-10-20
+# BUD — Sprint closeout | 2026-10-20
 
 ## Objective
-Improve the auditability of BUD v0.7 PO-aligned project administration and management reporting, with focus on authorized customer PO amendments, partial receipts/invoicing, and financial integrity.
+Improve auditability of post-approved-customer-PO administration, PO amendment controls, FX exception handling and consolidated reporting in a **fictional portfolio prototype**.
 
-## Completed today
-- Reviewed repository README, original business rules, roadmap and simulated scenarios.
-- Authored a deterministic **13-case** test protocol for PO and financial controls, including explicit expected outcomes.
-- Defined minimum input identifiers, evidence requirements, duplicate checks, and an acceptance gate.
-- Updated repository navigation and clarified that earlier v0.7 workbook tests were not re-executed today.
+## Plan versus actual
+| Planned | Actual | Disposition |
+|---|---|---|
+| Define deterministic PO and financial tests | 13-case protocol created | COMPLETE |
+| Test PO authorization | PO-02 and PO-04 PASS in Excel 365 on local corrective draft | SELECTED CONTROLS PASS |
+| Test financial exceptions | FIN-05 and FIN-06 PASS in Excel 365 on local corrective draft | SELECTED CONTROLS PASS |
+| Check monthly consolidation | CONS-01 and CONS-02 PASS in Excel 365 on earlier corrective draft | PASS, EARLIER DRAFT |
+| Check FX reporting integrity | Original CONS-03 FAIL: reports lacked FX warning despite FX HOLD | DEFECT IDENTIFIED |
+| Correct FX warning propagation | Local FX-corrected v0.7.1 workbook created; CONS-03A–E local automated PASS reported | PROVISIONAL; EXCEL 365 DEFERRED |
+| Repeat consolidated regression | CONS-01/02 + CONS-03A–E: seven local automated PASS reported | PROVISIONAL |
+| Publish corrected workbook | Not performed | CORRECTIVE FILE REMAINS LOCAL |
 
-## Not completed / not claimed
-- No spreadsheet formulas modified or recalculated in Microsoft Excel.
-- No new test results observed: all 13 new cases remain **NOT RUN**.
-- No real ERP reconciliation, customer amendment evidence, FX policy or Power BI deployment.
-- No historical claims or actual business results changed.
+## Verified controls and evidence
+The published GitHub workbook is **v0.7 PO Aligned** and remains unchanged. Later test results apply to **local v0.7.1 corrective workbooks only**. Manual Excel 365 checks on an earlier corrective draft and local automated checks on the latest FX-corrected workbook are different evidence levels. Neither verifies customer authorization, an approved FX policy or actual ERP financial data. See [validation matrix](BUD_Validation_Status_2026-10-20.md).
 
-## Next execution block (50 minutes)
-1. **0–10 min:** open the published v0.7 workbook, capture baseline values and calculation environment.
-2. **10–30 min:** execute PO-01 to PO-07, recording cell-level evidence and defects.
-3. **30–45 min:** execute FIN-01 to FIN-06 where workbook structure permits; mark unsupported cases BLOCKED, not PASS.
-4. **45–50 min:** publish observed results and prioritized defects; decide whether a corrective v0.7.1 is justified.
+## Open limitations
+- Latest FX-corrected workbook has **not** undergone full Excel 365 desktop regression; deferred by decision, not counted as PASS.
+- PO and FX approvals are manual metadata; no authenticated documents, real exchange-rate policy, or ERP reconciliation.
+- PO-05, PO-06, PO-07 and FIN-04 remain **BLOCKED** because receipt, delivery, invoice, duplicate-ID and intercompany matching require transaction-level data.
+- No production ERP integration, audited financial consolidation, Power BI deployment or intercompany elimination.
 
-## Definition of done
-Every executed case has an observed output and a reproducible evidence trail; every unsupported case has a limitation; repository descriptions reflect actual testing status.
+## Future functionality (not implemented)
+Versioned approved PO amendments; transaction-line receipt/delivery/invoice controls; duplicate prevention; real FX source-to-USD lineage and effective-date policy; reconciled intercompany costs; governed BI ingestion.
+
+## Sprint decision
+**Provisionally close the BUD prototype sprint for portfolio documentation and move focus to EVOF.** This is not a production release, external financial validation or permission to publish the corrected workbook. Full Excel 365 regression remains a later release gate.
