@@ -17,7 +17,15 @@ The v0.7 PO-aligned prototype is published as the current portfolio workbook. Th
 
 ## Validation workstream — 20 October 2026
 
-The [PO amendment and financial integrity test protocol](docs/BUD_PO_Amendment_and_Financial_Integrity_Test_Plan_2026-10-20.md) defines 13 deterministic acceptance cases for authorized PO changes, partial receipts and invoicing, duplicate prevention, project-cost semantics and FX exceptions. **All 13 new cases are NOT RUN**; this is a test specification, not new validation evidence. The earlier three fictional scenario results remain historical and were not re-executed. See the [sprint update](docs/BUD_Sprint_Update_2026-10-20.md) for status and the next execution block.
+**Version boundary:** the published workbook is **v0.7 PO Aligned**. Corrective **v0.7.1** workbooks remain **local and unpublished**; results below do not validate or replace the GitHub v0.7 baseline.
+
+**Controls validated in the local prototype:** PO-02 (approved PO delta), PO-04 (pending amendment excluded), FIN-05 (FX HOLD), and FIN-06 (above-PO invoicing exception) passed manual Excel 365 checks on an earlier corrective draft. CONS-01 (monthly invoice propagation) and CONS-02 (MX/USA reconciliation) passed those earlier Excel 365 checks and local automated regression on the latest FX-corrected copy. CONS-03A–E (FX warnings, simulated approval, source amount preservation, unaffected groups and reconciliation) passed **local automated regression only**; full Excel 365 testing of the latest copy is deferred.
+
+**Limitations:** approval references and FX approval are manually entered metadata, not authenticated evidence. Sample USD figures are illustrative and pre-normalized; no real FX policy, ERP reconciliation, accounting audit or live BI pipeline exists. PO-05 (receipts), PO-06 (delivery versus invoice), PO-07 (duplicate IDs) and FIN-04 (intercompany matching) are **BLOCKED** by absent transaction-grain source data. The monthly invoice/cost difference is not definitive profit.
+
+**Future functionality — not implemented:** externally verified versioned PO amendments; transaction-line receipt/delivery/invoice controls and duplicate detection; approved FX policy with currency lineage; reconciled intercompany mapping; governed ERP ingestion and Power BI deployment.
+
+**Sprint disposition:** provisionally closed for portfolio documentation, not production release. The corrected v0.7.1 workbook is **not published**. See [validation status](docs/BUD_Validation_Status_2026-10-20.md), [test protocol](docs/BUD_PO_Amendment_and_Financial_Integrity_Test_Plan_2026-10-20.md), and [sprint closeout](docs/BUD_Sprint_Update_2026-10-20.md).
 
 ## Portfolio deliverables
 - **[Management-reporting case study](docs/BUD_v0_7_Portfolio_Case_Study.md)** — historical context, responsibilities, design decisions and evidence boundaries
