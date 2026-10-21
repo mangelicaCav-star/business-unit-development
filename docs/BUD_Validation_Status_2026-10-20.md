@@ -38,4 +38,4 @@
 5. Governed production pipeline and Power BI reporting.
 
 ## Release decision
-**BUD sprint provisionally closed for portfolio documentation only.** Deferred Excel 365 regression is explicitly accepted for now; it is not a PASS. The corrected v0.7.1 workbook remains local and unpublished. This documentation update does not promote the published v0.7 workbook or claim production readiness.
+**BUD sprint provisionally closed for portfolio documentation only.** Deferred Excel 365 regression is explicitly accepted for now; it is not a PASS. The corrected v0.7.1 workbook was subsequently published on 2026-10-21 at [repository root](../BUD_Management_Reporting_v0_7_1_FX_Reporting_Corrected_LOCAL.xlsx); Excel 365 regression remains deferred. This documentation update does not promote the published v0.7 workbook or claim production readiness.
