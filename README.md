@@ -88,3 +88,7 @@ Historical practices are reconstructed from firsthand experience, not independen
 
 ## Related project
 [EVOF — Procurement Operations Framework](https://github.com/mangelicaCav-star/procurement-operations-framework) is an independent procurement-improvement and data-governance portfolio project, not a historical deployment of BUD.
+
+## Process documentation for future orchestration (2026-10-20)
+
+[Process & Automation Readiness Log](docs/PROCESS_AUTOMATION_LOG.md) records process-level inputs, rules, responsibilities, outputs, validation evidence, exceptions, and possible future agent/tool orchestration. This is **documentation only**: it does not introduce AI agents, replace functional testing, or claim completed manual integration with the other project. Process records will be refined as functional sprints close.
