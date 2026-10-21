@@ -17,3 +17,7 @@
 **Disposition:** Excel 365 checks corroborate the corrected FX-warning propagation within tested scenarios, but do not establish full end-to-end release validation. PO-05, PO-06, PO-07 and FIN-04 remain blocked due to missing transaction-grain data; FX approval is simulated metadata, not authenticated. No real ERP/finance reconciliation. Production release not approved.
 
 **EVOF is a separate project:** EV-01 through EV-07 were all NOT RUN in Excel 365; earlier 13/13 local checks do not replace desktop validation.
+
+## Confirmation — 2026-10-21
+
+The tester resubmitted the complete combined Excel 365 checklist, confirming **BU-01 through BU-06: 6/6 PASS** with no observations. No additional BUD defects reported. The corrected FX status/warning behavior is accepted for these six tested scenarios; blocked transaction-grain controls and real finance/ERP reconciliation remain outside the acceptance scope. No independent Excel 365 run or screenshots supplied.
