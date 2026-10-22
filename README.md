@@ -17,7 +17,7 @@ The v0.7 PO-aligned prototype is published as the current portfolio workbook. Th
 
 ## Validation workstream — 20 October 2026
 
-**Version boundary:** the published workbook is **v0.7 PO Aligned**. Corrective **v0.7.1** workbooks remain **local and unpublished**; results below do not validate or replace the GitHub v0.7 baseline.
+**Version boundary (historical validation as of 20 October):** v0.7 PO Aligned was then the published baseline, while corrective v0.7.1 remained local. **Publication was subsequently completed on 21 October 2026**, as documented below. Results from earlier drafts do not certify the final published v0.7.1 workbook.
 
 **Controls validated in the local prototype:** PO-02 (approved PO delta), PO-04 (pending amendment excluded), FIN-05 (FX HOLD), and FIN-06 (above-PO invoicing exception) passed manual Excel 365 checks on an earlier corrective draft. CONS-01 (monthly invoice propagation) and CONS-02 (MX/USA reconciliation) passed those earlier Excel 365 checks and local automated regression on the latest FX-corrected copy. CONS-03A–E (FX warnings, simulated approval, source amount preservation, unaffected groups and reconciliation) passed **local automated regression only**; full Excel 365 testing of the latest copy is deferred.
 
@@ -25,7 +25,7 @@ The v0.7 PO-aligned prototype is published as the current portfolio workbook. Th
 
 **Future functionality — not implemented:** externally verified versioned PO amendments; transaction-line receipt/delivery/invoice controls and duplicate detection; approved FX policy with currency lineage; reconciled intercompany mapping; governed ERP ingestion and Power BI deployment.
 
-**Sprint disposition:** provisionally closed for portfolio documentation, not production release. The corrected v0.7.1 workbook is **not published**. See [validation status](docs/BUD_Validation_Status_2026-10-20.md), [test protocol](docs/BUD_PO_Amendment_and_Financial_Integrity_Test_Plan_2026-10-20.md), and [sprint closeout](docs/BUD_Sprint_Update_2026-10-20.md).
+**Sprint disposition:** provisionally closed for portfolio documentation, not production release. The corrected v0.7.1 workbook **was published on 21 October 2026**; final Excel 365 desktop regression remains deferred. See [validation status](docs/BUD_Validation_Status_2026-10-20.md), [test protocol](docs/BUD_PO_Amendment_and_Financial_Integrity_Test_Plan_2026-10-20.md), and [sprint closeout](docs/BUD_Sprint_Update_2026-10-20.md).
 
 ## Portfolio deliverables
 - **[Management-reporting case study](docs/BUD_v0_7_Portfolio_Case_Study.md)** — historical context, responsibilities, design decisions and evidence boundaries
@@ -96,3 +96,15 @@ Historical practices are reconstructed from firsthand experience, not independen
 ### Corrective workbook publication — 2026-10-21
 
 **BUD v0.7.1 FX Reporting Corrected** is published at [BUD_Management_Reporting_v0_7_1_FX_Reporting_Corrected_LOCAL.xlsx](BUD_Management_Reporting_v0_7_1_FX_Reporting_Corrected_LOCAL.xlsx) (original `_LOCAL` filename retained). Prior v0.7 files remain in the repository unchanged. The correction propagates provisional FX status to consolidated reporting; see [validation status](docs/BUD_Validation_Status_2026-10-20.md). Local automated consolidated checks passed in the modeled scenarios, but the final v0.7.1 workbook has **not** completed an Excel 365 desktop regression. Transaction-grain receipt/invoice matching and real ERP/finance reconciliation remain outside verified scope. This is a portfolio prototype, **not a production-approved financial control**.
+
+## ERP authority and management-control design — sprint decisions (2026-10-21)
+
+**BUD-ARCH-01:** The ERP is the authoritative System of Record for official project statuses and transactional records. BUD is a **complementary management-control and discrepancy follow-up layer**, not a replacement ERP or an independent second approval system. Under applicable company policy, a customer PO registered through an approved ERP workflow may support authorization; projects without a customer PO may require documented management approval. Whether a particular ERP status proves completion of approvals must be confirmed against the actual ERP workflow.
+
+The planned model separates **ERP Project Status**, **BUD Control Status**, and **Follow-up Priority**. An ERP project may remain `OPEN` while BUD flags `REVIEW REQUIRED`; BUD must not silently change official ERP status or erase unresolved exceptions. `PO Authorization` will be redesigned as PO evidence, amendment, and reconciliation control rather than duplicative authorization. Missing source data must not be treated as zero or as proof of full invoicing.
+
+Project closure requires documented checks against the **final approved scope** (receipt, delivery/acceptance, invoicing), plus financial and administrative reconciliation; BUD can indicate `READY TO CLOSE` but official `CLOSED` belongs to ERP. A reconciled closed project at 100% budget utilization should not raise a budget-only warning. Separate compliance exceptions remain visible.
+
+**Validation boundary:** dropdown selection and priority/exception color alerts were user-tested in a **local capture-testing copy**, not in the published v0.7.1 workbook. The full Excel 365 desktop regression of the published final corrective version remains deferred. The Copilot five-minute summary is an exploratory audit artifact, not certified financial reporting. No new workbook version has been published for these decisions.
+
+**Next planned version:** v0.7.2 (requirements defined; **not implemented or released**). See the [21 October sprint decision log](docs/BUD_Sprint_Decisions_2026-10-21.md) for detailed rules, defects, test scope and planning estimates. Power BI and agent orchestration remain future work.
