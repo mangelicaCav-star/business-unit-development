@@ -2,12 +2,24 @@
 
 **Professional portfolio | Business Operations · Procurement · Commercial Development · Global Sourcing · Management Reporting**
 
+## Current development snapshot — 22 October 2026
+
+| Artifact | Current state | Evidence boundary |
+|---|---|---|
+| Published workbook | v0.7.1 FX Reporting Corrected | Six FX-related Excel 365 checks reported PASS by the user; complete release regression remains open |
+| Private interactive simulator | 1.0, deployed with owner-only access | 47/47 deterministic JavaScript cases and scoped browser QA; fictional data |
+| Planned workbook correction | v0.7.2 requirements | Not released; simulator adaptations do not close all closure/exception requirements |
+
+**[Simulator guide](docs/BUD_Simulator_Guide.md)** · **[47-case validation record](docs/BUD_Simulator_Validation_2026-10-22.md)** · [Private simulator — owner account required](https://bud-control-simulator.humblerobin2048.chatgpt.site).
+
+The simulator separates ERP status from BUD control, exposes missing authorization/invoice data, compares commitments and budget, and propagates FX warnings through monthly reporting. Its seven-project capture and independent six-PO harness are simulations, not real ERP exports. The public documentation does not publish the simulator code, change access, or release a new workbook. [Excel 365 evidence](docs/BUD_Excel365_Validation_2026-10-21.md) remains distinct from simulator tests. Full closure readiness, including the closed/reconciled 100%-budget exemption, is still open.
+
 ## Overview
-BUD documents the historical operationalization of **Strategic Services** and **Brands** business units within an established industrial company, and presents a separate **v0.7 management-reporting workbook prototype** informed by that experience.
+BUD documents the historical operationalization of **Strategic Services** and **Brands** business units within an established industrial company, and presents a separate **v0.7.1 management-reporting workbook and private simulator 1.0** informed by that experience.
 
 Operational Management initiated the business-unit concept. The administrator designed and coordinated the practical operating structure in consultation with management, while independently evaluating quotations, selling prices, project-specific cost components, and delivery terms. Existing Purchasing, Warehouse, Invoicing, and Finance departments retained ownership of their ERP transactions.
 
-**Confirmed administrative scope (16 October 2026):** BUD begins upon receipt of an approved customer PO. Pre-award sales tracking and pricing decisions remain part of the historical experience but outside the BUD administrative KPI model. The PO-aligned 20-sheet workbook is now uploaded as the current prototype. The original 21-sheet workbook remains archived in the repository for comparison.
+**Confirmed administrative scope (16 October 2026):** BUD begins upon receipt of an approved customer PO. Pre-award sales tracking and pricing decisions remain part of the historical experience but outside the BUD administrative KPI model. The PO-aligned 20-sheet workbook was the 16 October baseline. The FX-corrected v0.7.1 workbook is the current published workbook; the original versions remain archived for comparison.
 
 The workbook is a **portfolio prototype with fictional data**. It has **no live ERP connection**, no reconciliation to real ERP exports, and is **not** an accounting system or a statutory financial reporting model.
 
@@ -32,7 +44,7 @@ The v0.7 PO-aligned prototype is published as the current portfolio workbook. Th
 - **[Data dictionary and reporting controls](docs/BUD_v0_7_Data_Dictionary.md)** — metric definitions, reporting grain, expected ERP mapping and quality controls
 - **[Workbook user guide and reporting methodology](docs/BUD_v0_7_Workbook_Guide.md)** — navigation, limitations and reporting rules
 
-**Current workbook:** [BUD Management Reporting v0.7 — PO Aligned](BUD_Management_Reporting_v0_7_PO_Aligned%20(1).xlsx) (20 sheets; fictional data; PO-based administrative scope). **Historical workbook:** [original v0.7 review](BUD_Management_Reporting_v0_7_review%20(1).xlsx) (21 sheets, includes legacy pre-award content). The historical workbook is retained for reference; it is not the current reporting baseline.
+**Current published workbook:** [BUD v0.7.1 FX Reporting Corrected](BUD_Management_Reporting_v0_7_1_FX_Reporting_Corrected_LOCAL.xlsx). **Historical:** [v0.7 PO Aligned](BUD_Management_Reporting_v0_7_PO_Aligned%20(1).xlsx) and [original v0.7 review](BUD_Management_Reporting_v0_7_review%20(1).xlsx). The private simulator is a separate implementation and does not supersede the workbook as a versioned release.
 
 ## Binational operating model (Mexico–USA)
 The historical operating context included two selling entities, Mexico and USA, and cross-border procurement. When Mexico sold goods purchased through the US company, the US entity bought from the external supplier and acted as a supplier to Mexico. Mexico issued an intercompany purchase order, imported and received the goods, and used its own ERP records for project cost tracking.

@@ -49,3 +49,20 @@ Documentar cada proceso a medida que se implemente o revise, preservando entrada
 - No asumir autenticación de aprobaciones ni integridad de datos no disponibles.
 - Registrar versión, procedencia y evidencia; preservar la decisión manual cuando corresponda.
 - Cualquier decisión sobre agentes se considera **futura** hasta terminar y validar la integración manual.
+
+
+## Actualización de simulación privada — 2026-10-22
+
+**Artefacto:** simulador BUD 1.0. **Owner de revisión funcional:** Angelica Martinez. **Estado:** implementado y validado en motor JavaScript con datos ficticios; no validación productiva ni integración entre proyectos. [Guía](./BUD_Simulator_Guide.md) y [matriz de 47 casos](./BUD_Simulator_Validation_2026-10-22.md).
+
+| Registro | Disparador / entradas | Reglas / transformación | Responsables y autoridad | Salidas / evidencia | Excepción y recuperación |
+|---|---|---|---|---|---|
+| BUD-SIM-P01 | PO ERP, base de soporte, cambio, factura, presupuesto y compromisos | Vincular Project ID; conservar vacíos; excluir cambio pendiente; separar estado ERP/control BUD/prioridad | ERP conserva autoridad; Comercial valida soporte; Finanzas revisa exposición; owner valida modelo | Comparativo, diferencia PO, saldo, exposición y acciones | Dato faltante no es cero; revisar soporte o corte; cierre y exención presupuestal siguen incompletos |
+| BUD-SIM-P02 | PO única + evidencia identificable, moneda, importe y referencia FX condicional | Casos Sprint 01; no sumar evidencias múltiples; no comparar monedas diferentes | Dueño ERP y responsable documental resuelven la diferencia | Estado BUD y motivo, conservando estado ERP | Sin evidencia: MISSING EVIDENCE; múltiples/duplicados: revisión; falta FX: HOLD; editar solo escenario de prueba |
+| BUD-SIM-P03 | Registros históricos proyecto-mes prenormalizados en USD | Separar intake/facturas/pagos/costo/saldo EOM; agrupar BU/entidad; propagar FX | Finanzas es dueño de política y fuente; responsable de gestión revisa cierre | Totales, grupos, diferencia interna MX/US y brecha temporal | Duplicado o dato ausente bloquea agregación; FX no se reconstruye sin linaje; conservar histórico |
+
+**Contrato y procedencia:** escenarios sintéticos, unidades y moneda visibles, versión fuente y corte separados del escenario. Los supuestos editados no constituyen hechos ERP ni autorizaciones autenticadas. 47/47 resultados JavaScript PASS y verificación de interacción en navegador; las pruebas de Excel 365 se registran por separado con su procedencia de usuario.
+
+**Dependencia BUD–EVOF:** no hay interfaz ejecutada. El intercambio manual necesita IDs, moneda, reglas aceptadas y pruebas cruzadas antes de cualquier orquestación. **LLM/agentes:** futuro; ningún motor determinista se sustituye por texto generado. Exportar JSON permite revisar el caso, no crea una bitácora inmutable.
+
+**Siguiente puerta:** comparar escenarios Excel–simulador–criterio operativo, registrar diferencias y aceptar o rechazar las extensiones. No se declara cerrado el backlog pendiente por tener un simulador funcional.

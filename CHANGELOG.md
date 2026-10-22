@@ -1,5 +1,11 @@
 # Changelog
 
+## Private simulator documentation — 2026-10-22
+- Documented the separate owner-only BUD simulator 1.0, its post-PO scope, source gaps, assumptions, 47 JavaScript cases and browser checks.
+- Added public guide and validation matrix, linked private access explicitly, and updated process records without publishing simulator source or replacing workbook binaries.
+- Preserved missing authorization/invoice values and distinguished simulator controls from transaction-grain and closure requirements still open for v0.7.2.
+- Recorded selected user-reported Excel 365 evidence separately from simulator results.
+
 ## v0.1 — 2026-10-15
 - Initial historical reconstruction and case-study documentation.
 - No software or spreadsheet prototype implemented or validated.
