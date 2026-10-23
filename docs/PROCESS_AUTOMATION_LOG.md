@@ -66,3 +66,17 @@ Documentar cada proceso a medida que se implemente o revise, preservando entrada
 **Dependencia BUD–EVOF:** no hay interfaz ejecutada. El intercambio manual necesita IDs, moneda, reglas aceptadas y pruebas cruzadas antes de cualquier orquestación. **LLM/agentes:** futuro; ningún motor determinista se sustituye por texto generado. Exportar JSON permite revisar el caso, no crea una bitácora inmutable.
 
 **Siguiente puerta:** comparar escenarios Excel–simulador–criterio operativo, registrar diferencias y aceptar o rechazar las extensiones. No se declara cerrado el backlog pendiente por tener un simulador funcional.
+
+
+## Operational working-copy closeout — 2026-10-23
+
+This checkpoint supersedes the earlier payment/exposure perspective for the dated workbook only. It does not change the private simulator or implement agents. [Closeout](BUD_Sprint_Closeout_2026-10-23.md) · [Dictionary](BUD_Operational_Data_Dictionary_2026-10-23.md) · [Validation](BUD_Operational_Validation_2026-10-23.md).
+
+| Process | Trigger / inputs | Rules and responsibility | Output / evidence | Exception / boundary |
+|---|---|---|---|---|
+| BUD-OP-P01 | ERP project budget and authorized supplier-PO total | Owner-reported mandatory-PO policy; matching eligible cost perimeter, currency and tax basis required. ERP owns facts; coordinator follows exceptions | PO-scoped residual and utilization; focused local checks | Missing PO value remains missing. No actual-cost, receipt, liability, payment or full-profit inference |
+| BUD-OP-P02 | ERP invoice/project records with actual Invoice date, original amount and currency | Coordinator loads ERP source; formulas validate dates and allocation keys, exclude cancellations and derive the month | Separate original USD/MXN billing by month and YTD; 31-case working-copy record | Invalid inputs remain visible; FX HOLD affects normalization, not otherwise-valid original MXN. No invented historical dates |
+| BUD-OP-P03 | Monthly customer-order intake and ERP-recorded costs; dated invoice source | Keep monthly operating inputs distinct from invoice transactions. Preserve prior values; do not sum payments and cost commitments | Management reporting, current 15-page manual, artifact manifest | Current snapshot and project history are not immutable close archives; real ERP reconciliation and full desktop regression remain open |
+
+**Sprint boundary:** close implemented work and documentation only. The independent six-PO harness is not a required operational report. Native Excel evidence from older artifacts and 47 simulator JavaScript cases remain separate. No BUD–EVOF interface or future LLM orchestration was implemented in this session.
+

@@ -1,3 +1,5 @@
+> **Historical baseline document.** For the 23 October 2026 working copy, use the [current data dictionary](BUD_Operational_Data_Dictionary_2026-10-23.md), [updated illustrated manual](BUD_User_Guide_2026-10-23.pdf) and [sprint closeout](BUD_Sprint_Closeout_2026-10-23.md). Payment/exposure and publication statements below describe the older artifact, not the current working copy.
+
 # BUD v0.7 — Management Reporting Data Dictionary
 
 **Status:** Portfolio prototype; fictional records; no live ERP integration.
@@ -45,3 +47,4 @@ Project ID, customer, BU, brand, selling entity, original currency, authorized P
 
 ## Scope clarification — 16 October 2026
 The BUD administrative reporting boundary begins with receipt of an approved customer PO. Customer PO authorized value plus approved amendments is the project commercial baseline. Sales-owned pre-award quotation/pricing/markup/margin fields must not feed BUD management KPIs. Keep authorized PO value, cumulative invoicing, unpaid exposure, paid investment and ERP-recognized costs separately defined; do not treat PO value as realized revenue or sum overlapping cost/payment measures. The current published v0.7 PO-aligned workbook implements the administrative scope in its 20-sheet prototype; the original 21-sheet version remains historical. Documentary PO amendment approval remains unverified.
+

@@ -1,0 +1,258 @@
+{
+  "snapshot": "2026-10-23 working snapshot",
+  "engine": "Artifact Tool local recalculation",
+  "passed": 31,
+  "total": 31,
+  "native_excel_regression": false,
+  "real_erp_reconciliation": false,
+  "checks": [
+    {
+      "label": "Missing PO total is explicit",
+      "sheet": "Project Control",
+      "cell": "L2",
+      "expected": "PO DATA REQUIRED",
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Budget remaining",
+      "sheet": "Project Control",
+      "cell": "J2",
+      "expected": 3000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Preventive threshold",
+      "sheet": "Project Control",
+      "cell": "L2",
+      "expected": "PREVENTIVE ALERT",
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Recognized cost not added",
+      "sheet": "Project Control",
+      "cell": "J2",
+      "expected": 3000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Over budget on PO total",
+      "sheet": "Project Control",
+      "cell": "L2",
+      "expected": "OVER BUDGET",
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Explicit zero is valid",
+      "sheet": "Project Control",
+      "cell": "J2",
+      "expected": 38000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Date validation",
+      "sheet": "Invoice Register",
+      "cell": "L2",
+      "expected": "VALID",
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Date-derived September",
+      "sheet": "Invoice Register",
+      "cell": "M2",
+      "expected": "2026-09",
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "October report from invoice date",
+      "sheet": "Management Report",
+      "cell": "B6",
+      "expected": 2000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Project-month invoice summary",
+      "sheet": "Monthly Project Activity",
+      "cell": "H5",
+      "expected": 2000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Moving date moves monthly amount",
+      "sheet": "Management Report",
+      "cell": "B6",
+      "expected": 3000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Unique project count across two invoices",
+      "sheet": "Management Report",
+      "cell": "B11",
+      "expected": 1,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "No US invoices in loaded month is zero",
+      "sheet": "Management Report",
+      "cell": "B16",
+      "expected": 0,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Entity invoice sums reconcile",
+      "sheet": "Management Report",
+      "cell": "B17",
+      "expected": 0,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "YTD sums dated available months",
+      "sheet": "Management Report",
+      "cell": "O6",
+      "expected": 3000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Text date rejected",
+      "sheet": "Invoice Register",
+      "cell": "L2",
+      "expected": "INVALID INVOICE DATE",
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Invalid date cannot silently disappear",
+      "sheet": "Management Report",
+      "cell": "B6",
+      "expected": "INVOICE REVIEW",
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Duplicate allocation rejected",
+      "sheet": "Invoice Register",
+      "cell": "L2",
+      "expected": "DUPLICATE INVOICE / PROJECT",
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Cancelled excluded",
+      "sheet": "Management Report",
+      "cell": "B6",
+      "expected": 1000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "MXN cannot bypass FX approval",
+      "sheet": "Invoice Register",
+      "cell": "L3",
+      "expected": "FX HOLD",
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Native MXN remains visible during FX hold",
+      "sheet": "Management Report",
+      "cell": "B33",
+      "expected": 2000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Native USD kept separate",
+      "sheet": "Management Report",
+      "cell": "B32",
+      "expected": 1000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "December date retained",
+      "sheet": "Management Report",
+      "cell": "B6",
+      "expected": 1000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "January allocated to new year",
+      "sheet": "Management Report",
+      "cell": "B6",
+      "expected": 2000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "No invented historical dates",
+      "sheet": "Management Report",
+      "cell": "B6",
+      "expected": "INVOICE DATA REQUIRED",
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Prior monthly amounts retained",
+      "sheet": "Monthly Project Activity",
+      "cell": "T2",
+      "expected": 18000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Payment metric removed",
+      "sheet": "Management Report",
+      "cell": "B7",
+      "expected": null,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Snapshot MXN sales visible without FX",
+      "sheet": "Dashboard",
+      "cell": "F3",
+      "expected": 820000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Explicit zero invoices retain unbilled sale",
+      "sheet": "Project Control",
+      "cell": "F5",
+      "expected": 24000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Dashboard unbilled total reconciles",
+      "sheet": "Dashboard",
+      "cell": "B5",
+      "expected": 68000,
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    },
+    {
+      "label": "Missing PO data cannot appear as no budget alerts",
+      "sheet": "Dashboard",
+      "cell": "B10",
+      "expected": "DATA REQUIRED",
+      "result": "PASS",
+      "engine": "Artifact Tool local recalculation"
+    }
+  ]
+}

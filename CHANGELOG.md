@@ -1,5 +1,15 @@
 # Changelog
 
+## Operational working snapshot — 2026-10-23
+
+- Published a dated working copy and current illustrated manual; retained earlier binaries as historical baselines. This is not a v0.7.2 release.
+- Added January-to-cutoff/YTD views and separated original USD/MXN billing, preserving native MXN during FX HOLD.
+- Added ERP invoice/project source records with validated Invoice date, derived month, cancellation and duplicate-key handling; prior monthly aggregates remain date-unverified reference.
+- Changed budget monitoring to authorized supplier-PO value; removed active payment/open-payable and invoice-cost-gap metrics, while preserving legacy inputs.
+- Documented conditional acceptance: goods-sale scenario, owner-reported internal mandatory-PO policy, matching cost perimeter/currency/tax basis, and no actual-cost or complete-profit claim.
+- Reran 31/31 focused local checks on the final working snapshot. Full Excel 365 regression, real ERP reconciliation and earlier closure requirements remain open.
+- Recorded plan-versus-actual scope expansion and closed today's BUD session without new functionality or EVOF changes.
+
 ## Private simulator documentation — 2026-10-22
 - Documented the separate owner-only BUD simulator 1.0, its post-PO scope, source gaps, assumptions, 47 JavaScript cases and browser checks.
 - Added public guide and validation matrix, linked private access explicitly, and updated process records without publishing simulator source or replacing workbook binaries.
@@ -20,3 +30,4 @@
 - Deferred to future development: Power BI v0.8, ERP integration and reconciliation, amendment approval evidence and FX policy.
 
 - [Sprint activity log and plan-versus-actual closeout](docs/BUD_Sprint_Activity_Log_2026-10-16.md) records deliverables, acceptance boundaries, deviations and deferred backlog.
+

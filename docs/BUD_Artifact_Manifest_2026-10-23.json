@@ -1,0 +1,30 @@
+{
+  "snapshot": "2026-10-23 working snapshot",
+  "status": "not a v0.7.2 release; native Excel and real ERP validation open",
+  "artifacts": [
+    {
+      "repository_path": "workbooks/BUD_Operational_Working_2026-10-23.xlsx",
+      "local_name": "BUD_Management_Reporting.xlsx",
+      "size_bytes": 204758,
+      "sha256": "dfd7910251c326afb540bf069bf6c36bf20e1efd6a6b48b89a99ba76ff10e549"
+    },
+    {
+      "repository_path": "docs/BUD_User_Guide_2026-10-23.pdf",
+      "local_name": "BUD_Guia_Usuario_Captura_y_Reportes.pdf",
+      "size_bytes": 989474,
+      "sha256": "36f3d02732637c637ce516ad58c163c538a8415f738a7ecbfe66332dd47e7cef"
+    },
+    {
+      "repository_path": "validation/BUD_Local_Checks_2026-10-23.json",
+      "local_name": "BUD_Local_Checks_2026-10-23.json",
+      "size_bytes": 7048,
+      "sha256": "f4a06daa4aa0828fc1e964db0d41940579af843c3859f92c3ecc4aa16ad19032"
+    },
+    {
+      "repository_path": "validation/BUD_Checks_2026-10-23.mjs",
+      "local_name": "BUD_Checks_2026-10-23.mjs",
+      "size_bytes": 4476,
+      "sha256": "d237369850ca11b5f5c241fd5877f9734fc3d7331d9eeeec93e4091989d0f2bb"
+    }
+  ]
+}

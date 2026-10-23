@@ -1,122 +1,69 @@
-# BUD — Business Unit Development & Operational Implementation
+# BUD — Business Unit Development & Operational Project Control
 
-**Professional portfolio | Business Operations · Procurement · Commercial Development · Global Sourcing · Management Reporting**
+**Professional portfolio | Procurement · Operational Coordination · Management Reporting · Mexico–U.S.**
 
-## Current development snapshot — 22 October 2026
+BUD combines daily project follow-up with monthly management reporting using ERP-sourced information. It documents an operating design informed by experience developing Strategic Services and Brands within an established industrial company. ERP remains the official system of record.
 
-| Artifact | Current state | Evidence boundary |
+## Current artifacts — 23 October 2026
+
+| Artifact | Status | Evidence boundary |
 |---|---|---|
-| Published workbook | v0.7.1 FX Reporting Corrected | Six FX-related Excel 365 checks reported PASS by the user; complete release regression remains open |
-| Private interactive simulator | 1.0, deployed with owner-only access | 47/47 deterministic JavaScript cases and scoped browser QA; fictional data |
-| Planned workbook correction | v0.7.2 requirements | Not released; simulator adaptations do not close all closure/exception requirements |
+| [Operational workbook working snapshot](workbooks/BUD_Operational_Working_2026-10-23.xlsx) | Published dated working copy | 31/31 focused local checks on this copy; full Excel 365 regression and real ERP reconciliation remain open |
+| [Updated illustrated user manual](docs/BUD_User_Guide_2026-10-23.pdf) | Describes the dated working copy | Input fields, types, formulas, archived data and limitations; 15 pages |
+| [Earlier v0.7.1 FX-corrected workbook](BUD_Management_Reporting_v0_7_1_FX_Reporting_Corrected_LOCAL.xlsx) | Retained historical baseline | Six FX-related Excel 365 checks reported by the user on the earlier artifact; not evidence for this working copy |
+| Private simulator 1.0 | Separate, owner-only implementation | 47/47 deterministic JavaScript cases and scoped browser QA; not workbook validation |
+| v0.7.2 requirements | Not released | The dated working copy does not certify completion of all earlier closure/control requirements |
 
-**[Simulator guide](docs/BUD_Simulator_Guide.md)** · **[47-case validation record](docs/BUD_Simulator_Validation_2026-10-22.md)** · [Private simulator — owner account required](https://bud-control-simulator.humblerobin2048.chatgpt.site).
+**[Sprint closeout](docs/BUD_Sprint_Closeout_2026-10-23.md)** · **[Current data dictionary and controls](docs/BUD_Operational_Data_Dictionary_2026-10-23.md)** · **[Local validation record](docs/BUD_Operational_Validation_2026-10-23.md)** · **[Artifact manifest](docs/BUD_Artifact_Manifest_2026-10-23.json)**.
 
-The simulator separates ERP status from BUD control, exposes missing authorization/invoice data, compares commitments and budget, and propagates FX warnings through monthly reporting. Its seven-project capture and independent six-PO harness are simulations, not real ERP exports. The public documentation does not publish the simulator code, change access, or release a new workbook. [Excel 365 evidence](docs/BUD_Excel365_Validation_2026-10-21.md) remains distinct from simulator tests. Full closure readiness, including the closed/reconciled 100%-budget exemption, is still open.
+All records are fictional. New supplier-PO totals and dated invoice inputs are deliberately empty: legacy payments are not reclassified as PO totals, and invoice dates are not invented from monthly aggregates. The copy is usable for source-data loading and bounded testing, not a completed production deployment.
 
-## Overview
-BUD documents the historical operationalization of **Strategic Services** and **Brands** business units within an established industrial company, and presents a separate **v0.7.1 management-reporting workbook and private simulator 1.0** informed by that experience.
+## Operating purpose and conditional acceptance
 
-Operational Management initiated the business-unit concept. The administrator designed and coordinated the practical operating structure in consultation with management, while independently evaluating quotations, selling prices, project-specific cost components, and delivery terms. Existing Purchasing, Warehouse, Invoicing, and Finance departments retained ownership of their ERP transactions.
+The modeled scenario is **sale of goods**, after an approved customer PO. BUD supports authorized-sale and invoicing visibility, project-budget monitoring, purchase-order follow-up and actionable exceptions with responsibilities and deadlines. It is not accounts payable, treasury, receipt-line processing or an accounting-profit model.
 
-**Confirmed administrative scope (16 October 2026):** BUD begins upon receipt of an approved customer PO. Pre-award sales tracking and pricing decisions remain part of the historical experience but outside the BUD administrative KPI model. The PO-aligned 20-sheet workbook was the 16 October baseline. The FX-corrected v0.7.1 workbook is the current published workbook; the original versions remain archived for comparison.
+The owner's **mandatory project-PO policy is an internal operating premise**, not a universal accounting rule or verified ERP configuration. A budget/PO comparison is complete only when budget and authorized supplier POs cover the **same eligible cost perimeter, currency and tax basis**. Budget less PO value is available for new commitments only within that perimeter. A cost without a PO is not automatically financial overhead or unrelated to a project. PO authorization measures a commitment; it does not prove receipt, actual cost, a liability, payment or realized profitability.
 
-The workbook is a **portfolio prototype with fictional data**. It has **no live ERP connection**, no reconciliation to real ERP exports, and is **not** an accounting system or a statutory financial reporting model.
+## What the dated workbook demonstrates
 
-## Sprint closeout — 16 October 2026
-The v0.7 PO-aligned prototype is published as the current portfolio workbook. Three fictional functional scenarios were reported as passed: approved PO amount change, additional partial invoicing, and cost exposure exceeding PO. These demonstrate arithmetic and alert behavior only; no real ERP data or documentary approval workflow was validated. The workbook does **not** independently verify approval of PO amendments. This limitation and the future production control requirements are documented in the [Workbook Guide](docs/BUD_v0_7_Workbook_Guide.md). Next-phase items: Power BI v0.8, ERP field mapping/reconciliation, approved-amendment evidence, and FX policy. See [CHANGELOG](CHANGELOG.md) and [Sprint activity log / plan-versus-actual closeout](docs/BUD_Sprint_Activity_Log_2026-10-16.md).
+- **Daily operational control:** current ERP project snapshot, authorized operating budget, current authorized supplier-PO value, residual relative to POs, utilization alerts and exception follow-up. ERP-recorded costs remain separate.
+- **Dated billing source:** `Invoice Register` imports one invoice/project allocation per row. `Invoice date` is validated, and the reporting month is derived from the date. Issued and cancelled records, duplicate allocation keys and missing data are treated explicitly.
+- **Monthly and calendar-year reporting:** January through the selected month, with YTD totals and incomplete-source warnings. Original **USD and MXN billing remain separate**, including during FX HOLD; normalized USD is a distinct view.
+- **Source preservation:** prior monthly invoice values remain in `Monthly Project Activity!T`; former payment/open-balance values are archived and excluded from active operational metrics.
+- **Current-snapshot currencies:** Dashboard original USD/MXN authorized sale, invoicing and remaining billing are distinct from the selected reporting month.
 
+## Data flow
 
-## Validation workstream — 20 October 2026
+1. **ERP Snapshot + PO Authorization** supply the current project/commercial view. The new supplier-PO amount is `ERP Snapshot!S`; customer POs and supplier POs are different measures.
+2. **Exceptions + Update Log** record management actions and update provenance.
+3. **Invoice Register** supplies billing dates, allocated amounts, currencies, classifications and source status. Original amounts are preserved. Historical normalized USD must come from ERP/Finance, not a newly applied current FX rate.
+4. **Monthly Project Activity** retains monthly authorized customer-PO intake and ERP-recorded costs; billing is calculated from dated invoices. It is not generated automatically from the current snapshot.
+5. **Management Report / Monthly Trend / BU and brand groupings** present period and year-to-date views. `Project History` is a linked current view, not an immutable archive of closed periods.
 
-**Version boundary (historical validation as of 20 October):** v0.7 PO Aligned was then the published baseline, while corrective v0.7.1 remained local. **Publication was subsequently completed on 21 October 2026**, as documented below. Results from earlier drafts do not certify the final published v0.7.1 workbook.
+## Validation and limits
 
-**Controls validated in the local prototype:** PO-02 (approved PO delta), PO-04 (pending amendment excluded), FIN-05 (FX HOLD), and FIN-06 (above-PO invoicing exception) passed manual Excel 365 checks on an earlier corrective draft. CONS-01 (monthly invoice propagation) and CONS-02 (MX/USA reconciliation) passed those earlier Excel 365 checks and local automated regression on the latest FX-corrected copy. CONS-03A–E (FX warnings, simulated approval, source amount preservation, unaffected groups and reconciliation) passed **local automated regression only**; full Excel 365 testing of the latest copy is deferred.
+The [31-case record](docs/BUD_Operational_Validation_2026-10-23.md) covers focused local behavior, including month/year changes, invalid dates, cancellations, duplicate invoice/project keys, original currencies during FX HOLD, zero-versus-missing values and budget/PO alerts. It is not a full release regression, an independent ERP audit or proof that the company's purchase policy covers every project cost. A reproducible local check script and JSON results are included under `validation/`.
 
-**Limitations:** approval references and FX approval are manually entered metadata, not authenticated evidence. Sample USD figures are illustrative and pre-normalized; no real FX policy, ERP reconciliation, accounting audit or live BI pipeline exists. PO-05 (receipts), PO-06 (delivery versus invoice), PO-07 (duplicate IDs) and FIN-04 (intercompany matching) are **BLOCKED** by absent transaction-grain source data. The monthly invoice/cost difference is not definitive profit.
+No live ERP connection, authenticated approval workflow, complete receipt/delivery matching, closure-lock workflow, full project-lifecycle archive, comprehensive profitability model or BUD–EVOF integration is claimed. The existing row capacities and position-based customer-PO linkage are documented in the manual. Real ERP field mapping and accumulated-total reconciliation remain in the parking lot until actual exports are available.
 
-**Future functionality — not implemented:** externally verified versioned PO amendments; transaction-line receipt/delivery/invoice controls and duplicate detection; approved FX policy with currency lineage; reconciled intercompany mapping; governed ERP ingestion and Power BI deployment.
+The independent six-PO reconciliation harness was reviewed as an auxiliary test and removed from the active operational workflow. Its calculated PASS cells are not proof of a documented Excel execution. Today's partial user-observed T02 evidence is not counted among the 31 local checks.
 
-**Sprint disposition:** provisionally closed for portfolio documentation, not production release. The corrected v0.7.1 workbook **was published on 21 October 2026**; final Excel 365 desktop regression remains deferred. See [validation status](docs/BUD_Validation_Status_2026-10-20.md), [test protocol](docs/BUD_PO_Amendment_and_Financial_Integrity_Test_Plan_2026-10-20.md), and [sprint closeout](docs/BUD_Sprint_Update_2026-10-20.md).
+## Separate simulator evidence
 
-## Portfolio deliverables
-- **[Management-reporting case study](docs/BUD_v0_7_Portfolio_Case_Study.md)** — historical context, responsibilities, design decisions and evidence boundaries
-- **[Data dictionary and reporting controls](docs/BUD_v0_7_Data_Dictionary.md)** — metric definitions, reporting grain, expected ERP mapping and quality controls
-- **[Workbook user guide and reporting methodology](docs/BUD_v0_7_Workbook_Guide.md)** — navigation, limitations and reporting rules
+[Simulator guide](docs/BUD_Simulator_Guide.md) · [47-case record](docs/BUD_Simulator_Validation_2026-10-22.md) · [Private simulator — owner account required](https://bud-control-simulator.humblerobin2048.chatgpt.site).
 
-**Current published workbook:** [BUD v0.7.1 FX Reporting Corrected](BUD_Management_Reporting_v0_7_1_FX_Reporting_Corrected_LOCAL.xlsx). **Historical:** [v0.7 PO Aligned](BUD_Management_Reporting_v0_7_PO_Aligned%20(1).xlsx) and [original v0.7 review](BUD_Management_Reporting_v0_7_review%20(1).xlsx). The private simulator is a separate implementation and does not supersede the workbook as a versioned release.
+The simulator was not changed to match today's workbook. It retains its own documented assumptions, including earlier exposure/payment perspectives. Its code and assets remain private. See the [earlier Excel 365 evidence](docs/BUD_Excel365_Validation_2026-10-21.md) separately.
 
-## Binational operating model (Mexico–USA)
-The historical operating context included two selling entities, Mexico and USA, and cross-border procurement. When Mexico sold goods purchased through the US company, the US entity bought from the external supplier and acted as a supplier to Mexico. Mexico issued an intercompany purchase order, imported and received the goods, and used its own ERP records for project cost tracking.
+## Historical case and attribution
 
-The portfolio demonstrates **binational commercial and supply-chain coordination**, intercompany purchasing workflow awareness, import-related process visibility, and management reporting segmented by selling entity. It **does not** claim ownership of corporate accounting, legal consolidation, or intercompany eliminations.
+Operational Management initiated the business-unit concept. The administrator designed and coordinated the practical structure with management and independently evaluated quotations, selling prices, project-specific cost components and delivery terms. Purchasing, Warehouse, Invoicing and Finance retained their ERP responsibilities. Pre-award pricing work belongs to the historical experience, not current BUD administrative KPIs.
 
-## Power BI reporting opportunity
-The v0.7 Excel model is a suitable **conceptual source for a future Power BI report**, but **no Power BI dashboard or validated data pipeline has been built**.
+Business Unit, Brand and Selling Entity are distinct dimensions; brands subdivide the Brands unit. Strategic Services and Brands are in scope. Automation and Machining remain outside the administrator's attributable scope. For MX sales sourced through the US entity, the MX-side project purchase is used without adding the original US supplier acquisition again. No statutory consolidation or intercompany elimination is implemented.
 
-Recommended semantic model:
-- **FactProjectMonthlyActivity:** project-month commercial and cost movements, with separate month-end outstanding balances
-- **DimProject:** ERP Project ID, customer, business unit, brand, selling entity
-- **DimDate:** reporting calendar and fiscal periods
-- Optional controlled dimensions for **Business Unit**, **Brand**, and **Selling Entity**
+[Mandate](docs/01_Business_Mandate_and_Scope.md) · [Operating model](docs/02_Operating_Model_and_Process_Architecture.md) · [Roles](docs/03_Roles_and_Responsibilities.md) · [Business rules](docs/04_Business_Rules_and_Controls.md) · [Case study](docs/BUD_v0_7_Portfolio_Case_Study.md) · [Process log](docs/PROCESS_AUTOMATION_LOG.md) · [CHANGELOG](CHANGELOG.md).
 
-Proposed report pages: Executive Overview; Business Unit Performance; MX/USA Operations; Brand Performance; Project Profitability; Monthly Trends. Import the underlying project/month activity and dimensions, **not** all workbook summary sheets as independent fact tables. Actual deployment requires ERP extract mapping, FX policy, unique identifiers, and internal reconciliation checks.
+## Sprint boundary
 
-## Reporting architecture
-1. **ERP Snapshot / Project Control / Exceptions** — weekly management monitoring and critical-incident updates; the ERP assigns official Project IDs.
-2. **Customer PO authorization boundary** — BUD administration begins with an approved customer purchase order. Sales owns pre-award quotations, negotiation and pricing; quotation KPIs are excluded from BUD operational reporting.
-3. **Project History** — historical project master: customer, business unit, brand and selling entity.
-4. **Monthly Project Activity** — period-level customer order intake, invoices, paid investment, outstanding investment and ERP-recognized costs.
-5. **Monthly BU Close / Monthly Brand Detail** — management consolidation by business unit, brand and selling entity (Mexico or USA).
-6. **Management Report / Monthly Trend / BU Entity Matrix** — monthly reporting and illustrative trends.
+The 23 October session closes the work already performed and its documentation. Projection of future invoicing, project start/delivery dates, new ERP integrations, Power BI, agents and company-wide financial scope are not added to this cut. The original one-hour minimum-change plan expanded and was not achieved as a tightly bounded sprint; see the closeout for the plan-versus-actual assessment. No EVOF implementation work was performed in this BUD session.
 
-**Scope:** Strategic Services and Brands. Automation and Machining existed in the company but are **outside the administrator's operational scope** in this case study.
-
-## Critical business rules
-- Brands are **subdivisions of the Brands business unit**, not separate business units. One brand per quotation is the operating design; a customer may still combine quotations in a single PO, requiring careful cross-referencing without double counting.
-- **Business Unit**, **Brand**, and **Selling Entity (MX/USA)** are distinct reporting dimensions.
-- **Scope boundary:** pre-award quotation, proposed price, target/effective markup and quotation margin are Sales activities, not BUD administrative KPIs. The approved customer PO and approved amendments establish authorized project value.
-- Customer PO **order intake** is separate from invoicing. Net approved PO revisions are attributed to the applicable period.
-- **Investment 1** (paid disbursements), **Investment 2** (month-end unpaid exposure) and **ERP recognized costs** are separate metrics; they must not be summed as independent costs.
-- Where Mexico sells goods sourced through the US entity, the US company acts as Mexico's supplier. The MX-side ERP purchase/import record supports the MX project cost; the original US external supplier purchase is not counted again in that project.
-- Monthly invoicing less monthly ERP recognized costs is **timing-sensitive** and is **not definitive project profit**.
-- Sample USD amounts are assumed pre-normalized; the actual exchange-rate policy is unresolved.
-
-## Original case documentation
-- [Business mandate and scope](docs/01_Business_Mandate_and_Scope.md)
-- [Operating model and architecture](docs/02_Operating_Model_and_Process_Architecture.md)
-- [Roles and responsibilities](docs/03_Roles_and_Responsibilities.md)
-- [Business rules and controls](docs/04_Business_Rules_and_Controls.md)
-- [Data model and governance](docs/05_Data_Model_and_Governance.md)
-- [Outcomes and evidence](docs/06_Outcomes_and_Evidence.md)
-- [Prototype and validation roadmap](docs/07_Prototype_and_Validation_Roadmap.md)
-- [Ohtake manufacturer development](cases/Ohtake_Manufacturer_Development.md)
-- [Rittal opportunity assessment](cases/Rittal_Opportunity_Assessment.md)
-- [China international sourcing](cases/China_International_Sourcing.md)
-- [Fictional validation scenarios](examples/Simulated_Project_Scenarios.md)
-
-## Evidence and attribution
-Historical practices are reconstructed from firsthand experience, not independently audited. The portfolio makes no unsupported claims about revenue, ROI, savings or deployment. No confidential employer, customer, supplier or ERP records are published. The prototype demonstrates a proposed reporting architecture rather than verified production performance.
-
-## Related project
-[EVOF — Procurement Operations Framework](https://github.com/mangelicaCav-star/procurement-operations-framework) is an independent procurement-improvement and data-governance portfolio project, not a historical deployment of BUD.
-
-## Process documentation for future orchestration (2026-10-20)
-
-[Process & Automation Readiness Log](docs/PROCESS_AUTOMATION_LOG.md) records process-level inputs, rules, responsibilities, outputs, validation evidence, exceptions, and possible future agent/tool orchestration. This is **documentation only**: it does not introduce AI agents, replace functional testing, or claim completed manual integration with the other project. Process records will be refined as functional sprints close.
-
-### Corrective workbook publication — 2026-10-21
-
-**BUD v0.7.1 FX Reporting Corrected** is published at [BUD_Management_Reporting_v0_7_1_FX_Reporting_Corrected_LOCAL.xlsx](BUD_Management_Reporting_v0_7_1_FX_Reporting_Corrected_LOCAL.xlsx) (original `_LOCAL` filename retained). Prior v0.7 files remain in the repository unchanged. The correction propagates provisional FX status to consolidated reporting; see [validation status](docs/BUD_Validation_Status_2026-10-20.md). Local automated consolidated checks passed in the modeled scenarios, but the final v0.7.1 workbook has **not** completed an Excel 365 desktop regression. Transaction-grain receipt/invoice matching and real ERP/finance reconciliation remain outside verified scope. This is a portfolio prototype, **not a production-approved financial control**.
-
-## ERP authority and management-control design — sprint decisions (2026-10-21)
-
-**BUD-ARCH-01:** The ERP is the authoritative System of Record for official project statuses and transactional records. BUD is a **complementary management-control and discrepancy follow-up layer**, not a replacement ERP or an independent second approval system. Under applicable company policy, a customer PO registered through an approved ERP workflow may support authorization; projects without a customer PO may require documented management approval. Whether a particular ERP status proves completion of approvals must be confirmed against the actual ERP workflow.
-
-The planned model separates **ERP Project Status**, **BUD Control Status**, and **Follow-up Priority**. An ERP project may remain `OPEN` while BUD flags `REVIEW REQUIRED`; BUD must not silently change official ERP status or erase unresolved exceptions. `PO Authorization` will be redesigned as PO evidence, amendment, and reconciliation control rather than duplicative authorization. Missing source data must not be treated as zero or as proof of full invoicing.
-
-Project closure requires documented checks against the **final approved scope** (receipt, delivery/acceptance, invoicing), plus financial and administrative reconciliation; BUD can indicate `READY TO CLOSE` but official `CLOSED` belongs to ERP. A reconciled closed project at 100% budget utilization should not raise a budget-only warning. Separate compliance exceptions remain visible.
-
-**Validation boundary:** dropdown selection and priority/exception color alerts were user-tested in a **local capture-testing copy**, not in the published v0.7.1 workbook. The full Excel 365 desktop regression of the published final corrective version remains deferred. The Copilot five-minute summary is an exploratory audit artifact, not certified financial reporting. No new workbook version has been published for these decisions.
-
-**Next planned version:** v0.7.2 (requirements defined; **not implemented or released**). See the [21 October sprint decision log](docs/BUD_Sprint_Decisions_2026-10-21.md) for detailed rules, defects, test scope and planning estimates. Power BI and agent orchestration remain future work.
+[EVOF — Procurement Operations Framework](https://github.com/mangelicaCav-star/procurement-operations-framework) remains a separate portfolio project. Historical practices are reconstructed from firsthand experience, not independently audited. No confidential business data, verified ROI or production deployment is claimed.

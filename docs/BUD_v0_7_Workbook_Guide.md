@@ -1,3 +1,5 @@
+> **Historical baseline document.** For the 23 October 2026 working copy, use the [current data dictionary](BUD_Operational_Data_Dictionary_2026-10-23.md), [updated illustrated manual](BUD_User_Guide_2026-10-23.pdf) and [sprint closeout](BUD_Sprint_Closeout_2026-10-23.md). Payment/exposure and publication statements below describe the older artifact, not the current working copy.
+
 # BUD v0.7 — Workbook Guide and Reporting Methodology
 
 ## Purpose
@@ -38,3 +40,4 @@ The current workbook is `BUD_Management_Reporting_v0_7_PO_Aligned (1).xlsx`; `BU
 PO-based control was tested with fictional scenarios for an authorized PO value change, partial invoicing, and cost exposure above the PO. These tests assess arithmetic and alert behavior only. **The prototype does not independently verify documentary approval, authenticity, effective date, or authorization trail of a customer PO amendment.** An amended PO amount must therefore be treated as an externally verified input, not evidence that an amendment was approved. A future production design should capture amendment reference, approval status, effective date, source-document link, authorized approver, and an audit trail, and prevent unapproved amendments from changing the reporting baseline. No ERP integration, approval workflow, or real-document audit has been validated.
 
 **Version distinction:** The GitHub-hosted `BUD_Management_Reporting_v0_7_review (1).xlsx` is the earlier 21-sheet prototype. The revised 20-sheet PO-aligned workbook is published on GitHub as the current version; the two files must not be presented as equivalent.
+
