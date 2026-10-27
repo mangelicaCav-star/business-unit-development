@@ -1,0 +1,488 @@
+{
+  "version": "BUD-1.1",
+  "date": "2026-10-27",
+  "engine": "JavaScript / Node",
+  "synthetic": true,
+  "passed": 60,
+  "total": 60,
+  "cases": [
+    {
+      "name": "Mayo: USD original",
+      "expected": 6500,
+      "obtained": 6500,
+      "pass": true
+    },
+    {
+      "name": "Mayo: MXN original",
+      "expected": 80000,
+      "obtained": 80000,
+      "pass": true
+    },
+    {
+      "name": "Enero–mayo: USD",
+      "expected": 11000,
+      "obtained": 11000,
+      "pass": true
+    },
+    {
+      "name": "Enero–mayo: MXN",
+      "expected": 140000,
+      "obtained": 140000,
+      "pass": true
+    },
+    {
+      "name": "Normalizado mayo: fuente histórica",
+      "expected": 10500,
+      "obtained": 10500,
+      "pass": true
+    },
+    {
+      "name": "Normalizado enero–mayo",
+      "expected": 18000,
+      "obtained": 18000,
+      "pass": true
+    },
+    {
+      "name": "Enero a mayo: cinco columnas",
+      "expected": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05"
+      ],
+      "obtained": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05"
+      ],
+      "pass": true
+    },
+    {
+      "name": "Facturación parcial: saldo comercial",
+      "expected": 22000,
+      "obtained": 22000,
+      "pass": true
+    },
+    {
+      "name": "H01: proyecto fuera del catálogo",
+      "expected": "PROJECT NOT FOUND",
+      "obtained": "PROJECT NOT FOUND",
+      "pass": true
+    },
+    {
+      "name": "H01: subtotal USD no bloquea MXN",
+      "expected": [
+        2500,
+        80000,
+        1
+      ],
+      "obtained": [
+        2500,
+        80000,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "name": "H01: acumulado USD parcial",
+      "expected": 7000,
+      "obtained": 7000,
+      "pass": true
+    },
+    {
+      "name": "H01: enero, febrero y abril permanecen",
+      "expected": [
+        1000,
+        2000,
+        1500
+      ],
+      "obtained": [
+        1000,
+        2000,
+        1500
+      ],
+      "pass": true
+    },
+    {
+      "name": "H01: restauración",
+      "expected": 6500,
+      "obtained": 6500,
+      "pass": true
+    },
+    {
+      "name": "H02: rechazo en abril",
+      "expected": "PROJECT CLASSIFICATION MISMATCH",
+      "obtained": "PROJECT CLASSIFICATION MISMATCH",
+      "pass": true
+    },
+    {
+      "name": "H02: abril cero parcial y mayo intacto",
+      "expected": [
+        0,
+        1,
+        6500,
+        9500
+      ],
+      "obtained": [
+        0,
+        1,
+        6500,
+        9500
+      ],
+      "pass": true
+    },
+    {
+      "name": "H02: restauración abril",
+      "expected": 1500,
+      "obtained": 1500,
+      "pass": true
+    },
+    {
+      "name": "Marca única incompatible",
+      "expected": "PROJECT CLASSIFICATION MISMATCH",
+      "obtained": "PROJECT CLASSIFICATION MISMATCH",
+      "pass": true
+    },
+    {
+      "name": "Strategic Services no acepta marca",
+      "expected": "PROJECT CLASSIFICATION MISMATCH",
+      "obtained": "PROJECT CLASSIFICATION MISMATCH",
+      "pass": true
+    },
+    {
+      "name": "ID duplicado en catálogo",
+      "expected": "DUPLICATE PROJECT ID",
+      "obtained": "DUPLICATE PROJECT ID",
+      "pass": true
+    },
+    {
+      "name": "ID numérico enlaza con ID texto",
+      "expected": "VALID",
+      "obtained": "VALID",
+      "pass": true
+    },
+    {
+      "name": "IDs comodín son literales",
+      "expected": "PROJECT NOT FOUND",
+      "obtained": "PROJECT NOT FOUND",
+      "pass": true
+    },
+    {
+      "name": "Cancelación conserva registro sin suma",
+      "expected": [
+        "CANCELLED",
+        6500
+      ],
+      "obtained": [
+        "CANCELLED",
+        6500
+      ],
+      "pass": true
+    },
+    {
+      "name": "Cancelar emisión reduce subtotal",
+      "expected": 2500,
+      "obtained": 2500,
+      "pass": true
+    },
+    {
+      "name": "Duplicado excluye ambas asignaciones",
+      "expected": [
+        2,
+        2500,
+        2
+      ],
+      "obtained": [
+        2,
+        2500,
+        2
+      ],
+      "pass": true
+    },
+    {
+      "name": "Misma factura, distinto proyecto permitido",
+      "expected": "VALID",
+      "obtained": "VALID",
+      "pass": true
+    },
+    {
+      "name": "Fecha imposible",
+      "expected": "INVALID INVOICE DATE",
+      "obtained": "INVALID INVOICE DATE",
+      "pass": true
+    },
+    {
+      "name": "Fecha ausente: advertencia global",
+      "expected": [
+        1,
+        2500
+      ],
+      "obtained": [
+        1,
+        2500
+      ],
+      "pass": true
+    },
+    {
+      "name": "Invoice date gobierna mes",
+      "expected": [
+        2500,
+        4000
+      ],
+      "obtained": [
+        2500,
+        4000
+      ],
+      "pass": true
+    },
+    {
+      "name": "Fecha ISO sin dependencia de idioma",
+      "expected": true,
+      "obtained": true,
+      "pass": true
+    },
+    {
+      "name": "Año bisiesto válido",
+      "expected": true,
+      "obtained": true,
+      "pass": true
+    },
+    {
+      "name": "Año no bisiesto rechazado",
+      "expected": false,
+      "obtained": false,
+      "pass": true
+    },
+    {
+      "name": "Mes sin fuente es faltante",
+      "expected": [
+        false,
+        null
+      ],
+      "obtained": [
+        false,
+        null
+      ],
+      "pass": true
+    },
+    {
+      "name": "Mes con cancelación solamente es cero conocido",
+      "expected": [
+        true,
+        0
+      ],
+      "obtained": [
+        true,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "name": "Monto cero es dato válido",
+      "expected": [
+        "VALID",
+        2500
+      ],
+      "obtained": [
+        "VALID",
+        2500
+      ],
+      "pass": true
+    },
+    {
+      "name": "Monto vacío no se transforma en cero",
+      "expected": "AMOUNT REQUIRED",
+      "obtained": "AMOUNT REQUIRED",
+      "pass": true
+    },
+    {
+      "name": "Fuente ausente",
+      "expected": "ERP SOURCE REQUIRED",
+      "obtained": "ERP SOURCE REQUIRED",
+      "pass": true
+    },
+    {
+      "name": "Moneda inválida advierte sin sumar",
+      "expected": [
+        1,
+        2500
+      ],
+      "obtained": [
+        1,
+        2500
+      ],
+      "pass": true
+    },
+    {
+      "name": "FX pendiente conserva originales",
+      "expected": [
+        80000,
+        6500,
+        1
+      ],
+      "obtained": [
+        80000,
+        6500,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "name": "FX sin referencia bloquea normalización",
+      "expected": "FX HOLD",
+      "obtained": "FX HOLD",
+      "pass": true
+    },
+    {
+      "name": "FX sin metadato efectivo",
+      "expected": "FX HOLD",
+      "obtained": "FX HOLD",
+      "pass": true
+    },
+    {
+      "name": "MXN sin USD histórico conserva original",
+      "expected": [
+        80000,
+        6500
+      ],
+      "obtained": [
+        80000,
+        6500
+      ],
+      "pass": true
+    },
+    {
+      "name": "USD no exige normalización adicional",
+      "expected": "VALID",
+      "obtained": "VALID",
+      "pass": true
+    },
+    {
+      "name": "Diciembre: cierre calendario",
+      "expected": [
+        7000,
+        18000,
+        140000
+      ],
+      "obtained": [
+        7000,
+        18000,
+        140000
+      ],
+      "pass": true
+    },
+    {
+      "name": "Enero siguiente: reinicio anual",
+      "expected": [
+        8000,
+        20000,
+        1
+      ],
+      "obtained": [
+        8000,
+        20000,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "name": "Periodo inválido queda bloqueado",
+      "expected": 1,
+      "obtained": 1,
+      "pass": true
+    },
+    {
+      "name": "Presupuesto vs PO total: disponible",
+      "expected": 14000,
+      "obtained": 14000,
+      "pass": true
+    },
+    {
+      "name": "Costo reconocido no se suma a PO",
+      "expected": 14000,
+      "obtained": 14000,
+      "pass": true
+    },
+    {
+      "name": "Presupuesto agotado",
+      "expected": "BUDGET EXHAUSTED",
+      "obtained": "BUDGET EXHAUSTED",
+      "pass": true
+    },
+    {
+      "name": "PO cero autorizado: presupuesto intacto",
+      "expected": 18000,
+      "obtained": 18000,
+      "pass": true
+    },
+    {
+      "name": "PO faltante: disponible desconocido",
+      "expected": null,
+      "obtained": null,
+      "pass": true
+    },
+    {
+      "name": "Sobrepresupuesto",
+      "expected": "OVER BUDGET",
+      "obtained": "OVER BUDGET",
+      "pass": true
+    },
+    {
+      "name": "Umbral preventivo",
+      "expected": "PREVENTIVE ALERT",
+      "obtained": "PREVENTIVE ALERT",
+      "pass": true
+    },
+    {
+      "name": "Perímetro no confirmado impide comparación",
+      "expected": null,
+      "obtained": null,
+      "pass": true
+    },
+    {
+      "name": "Monedas diferentes impiden comparación",
+      "expected": null,
+      "obtained": null,
+      "pass": true
+    },
+    {
+      "name": "Estado ERP no cambia por alerta",
+      "expected": "Partial Invoice",
+      "obtained": "Partial Invoice",
+      "pass": true
+    },
+    {
+      "name": "Actividad octubre: costo ERP separado",
+      "expected": 43000,
+      "obtained": 43000,
+      "pass": true
+    },
+    {
+      "name": "Actividad mayo sin fuente no inventa costo",
+      "expected": null,
+      "obtained": null,
+      "pass": true
+    },
+    {
+      "name": "Actividad duplicada bloquea suma",
+      "expected": null,
+      "obtained": null,
+      "pass": true
+    },
+    {
+      "name": "Guardar/cargar versión actual",
+      "expected": "BUD-1.1",
+      "obtained": "BUD-1.1",
+      "pass": true
+    },
+    {
+      "name": "Escenario antiguo no se migra",
+      "expected": true,
+      "obtained": true,
+      "pass": true
+    }
+  ]
+}

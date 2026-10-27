@@ -80,3 +80,9 @@ This checkpoint supersedes the earlier payment/exposure perspective for the date
 
 **Sprint boundary:** close implemented work and documentation only. The independent six-PO harness is not a required operational report. Native Excel evidence from older artifacts and 47 simulator JavaScript cases remain separate. No BUD–EVOF interface or future LLM orchestration was implemented in this session.
 
+
+
+## 27 October 2026 — BUD simulator alignment and publication
+
+Published the accepted synthetic workbook and scoped sprint evidence after user authorization. The 23 October master remains untouched. Updated and deployed the existing owner-private BUD simulator as 1.1, with 60/60 JavaScript reference cases. Workbook local evidence, user-reported Excel365 acceptance and simulator evidence remain distinct. Native full regression and real ERP/provider/Finance validation were not executed. Browser QA was attempted but blocked by CUA kernel failure and preview readiness timeout. Scope frozen; no portfolio website or EVOF changes.
+

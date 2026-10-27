@@ -1,0 +1,250 @@
+{
+  "engine": "Artifact Tool local; full native Excel365 regression remains pending; scoped user-reported acceptance documented separately",
+  "checks": [
+    {
+      "label": "Baseline May USD",
+      "sheet": "Management Report",
+      "cell": "B32",
+      "expected": 6500,
+      "actual": 6500,
+      "pass": true
+    },
+    {
+      "label": "Baseline May MXN",
+      "sheet": "Management Report",
+      "cell": "B33",
+      "expected": 80000,
+      "actual": 80000,
+      "pass": true
+    },
+    {
+      "label": "H01 subtotal B32",
+      "sheet": "Management Report",
+      "cell": "B32",
+      "expected": 2500,
+      "actual": 2500,
+      "pass": true
+    },
+    {
+      "label": "H01 subtotal B33",
+      "sheet": "Management Report",
+      "cell": "B33",
+      "expected": 80000,
+      "actual": 80000,
+      "pass": true
+    },
+    {
+      "label": "H01 subtotal E32",
+      "sheet": "Management Report",
+      "cell": "E32",
+      "expected": 1000,
+      "actual": 1000,
+      "pass": true
+    },
+    {
+      "label": "H01 subtotal F32",
+      "sheet": "Management Report",
+      "cell": "F32",
+      "expected": 2000,
+      "actual": 2000,
+      "pass": true
+    },
+    {
+      "label": "H01 subtotal H32",
+      "sheet": "Management Report",
+      "cell": "H32",
+      "expected": 1500,
+      "actual": 1500,
+      "pass": true
+    },
+    {
+      "label": "H01 subtotal I32",
+      "sheet": "Management Report",
+      "cell": "I32",
+      "expected": 2500,
+      "actual": 2500,
+      "pass": true
+    },
+    {
+      "label": "H01 subtotal J32",
+      "sheet": "Management Report",
+      "cell": "J32",
+      "expected": 7000,
+      "actual": 7000,
+      "pass": true
+    },
+    {
+      "label": "H01 subtotal J33",
+      "sheet": "Management Report",
+      "cell": "J33",
+      "expected": 140000,
+      "actual": 140000,
+      "pass": true
+    },
+    {
+      "label": "H01 subtotal B6",
+      "sheet": "Management Report",
+      "cell": "B6",
+      "expected": 6500,
+      "actual": 6500,
+      "pass": true
+    },
+    {
+      "label": "H01 subtotal B11",
+      "sheet": "Management Report",
+      "cell": "B11",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "label": "H01 retained",
+      "sheet": "Invoice Register",
+      "cell": "L6",
+      "expected": "PROJECT NOT FOUND",
+      "actual": "PROJECT NOT FOUND",
+      "pass": true
+    },
+    {
+      "label": "H01 alert currency",
+      "sheet": "Management Report",
+      "cell": "B34",
+      "expected": "CONTAINS:NO CONSIDERADAS USD: 1; MXN: 0",
+      "actual": "NO CONSIDERADAS USD: 1; MXN: 0; SIN MONEDA: 0",
+      "pass": true
+    },
+    {
+      "label": "H01 row alert",
+      "sheet": "Management Report",
+      "cell": "C32",
+      "expected": "CONTAINS:SUBTOTAL PARCIAL: 1",
+      "actual": "SUBTOTAL PARCIAL: 1 registro(s) de factura USD no considerado(s). Ver Invoice Register, L.",
+      "pass": true
+    },
+    {
+      "label": "Unaffected January alert",
+      "sheet": "Management Report",
+      "cell": "E34",
+      "expected": "SIN EXCLUSIONES DETECTADAS",
+      "actual": "SIN EXCLUSIONES DETECTADAS",
+      "pass": true
+    },
+    {
+      "label": "YTD exclusion alert",
+      "sheet": "Management Report",
+      "cell": "J34",
+      "expected": "CONTAINS:NO CONSIDERADAS USD: 1",
+      "actual": "NO CONSIDERADAS USD: 1; MXN: 0; SIN MONEDA: 0",
+      "pass": true
+    },
+    {
+      "label": "Restored total",
+      "sheet": "Management Report",
+      "cell": "B32",
+      "expected": 6500,
+      "actual": 6500,
+      "pass": true
+    },
+    {
+      "label": "Restored alert",
+      "sheet": "Management Report",
+      "cell": "B34",
+      "expected": "SIN EXCLUSIONES DETECTADAS",
+      "actual": "SIN EXCLUSIONES DETECTADAS",
+      "pass": true
+    },
+    {
+      "label": "H02 exclusion",
+      "sheet": "Management Report",
+      "cell": "B32",
+      "expected": 2500,
+      "actual": 2500,
+      "pass": true
+    },
+    {
+      "label": "FX holds retain original MXN",
+      "sheet": "Management Report",
+      "cell": "B33",
+      "expected": 80000,
+      "actual": 80000,
+      "pass": true
+    },
+    {
+      "label": "FX-normalized subtotal excludes held MXN",
+      "sheet": "Management Report",
+      "cell": "B6",
+      "expected": 6500,
+      "actual": 6500,
+      "pass": true
+    },
+    {
+      "label": "FX clearly signaled",
+      "sheet": "Management Report",
+      "cell": "B23",
+      "expected": "CONTAINS:FX PENDIENTE: 1",
+      "actual": "SIN EXCLUSIONES DETECTADAS; FX PENDIENTE: 1",
+      "pass": true
+    },
+    {
+      "label": "FX not original exclusion",
+      "sheet": "Management Report",
+      "cell": "B34",
+      "expected": "SIN EXCLUSIONES DETECTADAS",
+      "actual": "SIN EXCLUSIONES DETECTADAS",
+      "pass": true
+    },
+    {
+      "label": "Undated excludes row",
+      "sheet": "Management Report",
+      "cell": "B32",
+      "expected": 2500,
+      "actual": 2500,
+      "pass": true
+    },
+    {
+      "label": "Undated unknown coverage alert",
+      "sheet": "Management Report",
+      "cell": "B34",
+      "expected": "CONTAINS:HAY REGISTROS SIN FECHA VALIDA",
+      "actual": "SIN EXCLUSIONES DETECTADAS; HAY REGISTROS SIN FECHA VALIDA",
+      "pass": true
+    },
+    {
+      "label": "January next year USD",
+      "sheet": "Management Report",
+      "cell": "B32",
+      "expected": 8000,
+      "actual": 8000,
+      "pass": true
+    },
+    {
+      "label": "January next year MXN",
+      "sheet": "Management Report",
+      "cell": "B33",
+      "expected": 20000,
+      "actual": 20000,
+      "pass": true
+    },
+    {
+      "label": "Final valid source restored",
+      "sheet": "Invoice Register",
+      "cell": "L6",
+      "expected": "VALID",
+      "actual": "VALID",
+      "pass": true
+    },
+    {
+      "label": "Final May restored",
+      "sheet": "Management Report",
+      "cell": "B32",
+      "expected": 6500,
+      "actual": 6500,
+      "pass": true
+    }
+  ],
+  "passed": 30,
+  "total": 30,
+  "changedGates": [],
+  "scope": "Valid invoice subtotals with explicit exclusion and FX coverage notices; no source deletion",
+  "publicationNote": "Archived sprint closeout results; not reexecuted during simulator publication."
+}

@@ -1,3 +1,14 @@
+# BUD publication — 27 October 2026
+
+- Publish a new clearly marked synthetic workbook with H01/H02 integrity checks, portable Invoice month, valid-record subtotals, explicit exclusions, date formatting and accepted sheet order. Preserve the 23 October master unchanged.
+- Record scoped Excel365 base/H01/H02 acceptance as reported by the user; retain 30 saved-file local subtotal checks separately.
+- Deploy owner-private simulator 1.1: Invoice date and original USD/MXN monthly/calendar YTD, invalid-record exclusions, PO-total budget comparison, separate ERP recognized cost and preserved ERP status.
+- Retire active payment/exposure views and independent six-PO harness; do not migrate legacy browser-local scenarios.
+- Run 60/60 JavaScript reference cases and static syntax/DOM checks. Browser QA not executed due to environment failures; no real ERP or production approval claimed.
+- No BUD–EVOF integration, PO-line development, new forecasts, parking-lot work or portfolio Site change. Earlier PDF remains historical; current rule delta is Markdown.
+
+---
+
 # Changelog
 
 ## Operational working snapshot — 2026-10-23
@@ -30,4 +41,5 @@
 - Deferred to future development: Power BI v0.8, ERP integration and reconciliation, amendment approval evidence and FX policy.
 
 - [Sprint activity log and plan-versus-actual closeout](docs/BUD_Sprint_Activity_Log_2026-10-16.md) records deliverables, acceptance boundaries, deviations and deferred backlog.
+
 

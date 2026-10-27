@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-27",
+  "scope": "BUD synthetic workbook and private simulator 1.1 evidence; no production certification",
+  "workbook_sha256": "5ede299930258af4b280835372e41c33eab6effca341c58278f7b74dc3f50aae",
+  "private_source_commit": "cb7b4270871ac1c828c8438e18b8b7960c21d807",
+  "simulator_tests": {
+    "passed": 60,
+    "total": 60,
+    "engine": "JavaScript / Node"
+  },
+  "workbook_local_evidence": {
+    "passed": 30,
+    "total": 30,
+    "engine": "Artifact Tool; retained from sprint, not reexecuted during publication"
+  },
+  "nativeExcel365": "User-reported scoped base/H01/H02; full regression pending",
+  "browserQA": "NOT EXECUTED: CUA kernel failure and preview readiness timeout",
+  "realERPValidation": "NOT EXECUTED",
+  "old_master": "workbooks/BUD_Operational_Working_2026-10-23.xlsx retained unchanged",
+  "privateSimulatorSourceIncluded": false,
+  "portfolioSiteChanged": false,
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "daf6e01fef77eb5d9eedd64cdb8e0c0a0e46796eaa77fe728f39578c6d8248e2",
+      "bytes": 4458
+    },
+    {
+      "path": "README.md",
+      "sha256": "7fc97acb18e240a2dc451e682ccb9b0932a72e27ce590ff44fc266df09a1bc02",
+      "bytes": 10063
+    },
+    {
+      "path": "docs/BUD_Operational_Data_Dictionary_2026-10-27.md",
+      "sha256": "ac0fbec06c76c2d558b4489411cc4a4bf310e8671d3e36ad12b1c38a1838fc89",
+      "bytes": 5331
+    },
+    {
+      "path": "docs/BUD_Operational_Validation_2026-10-27.md",
+      "sha256": "a10fce7c3156e42b3ecdd11e3ba1c6983ef86956edc9972cb12ee44bc5866371",
+      "bytes": 2856
+    },
+    {
+      "path": "docs/BUD_Simulator_Guide.md",
+      "sha256": "d16909a9278037640b342f2c9788ba1bb57b2b0a66f8b895ffb189aa84662476",
+      "bytes": 4952
+    },
+    {
+      "path": "docs/BUD_Simulator_Validation_2026-10-27.md",
+      "sha256": "3aea788d6cfc8254fcc3872105308ea0d9f9a7604c4098e83940b468a4c72e2a",
+      "bytes": 5491
+    },
+    {
+      "path": "docs/BUD_Sprint_Closeout_2026-10-27.md",
+      "sha256": "903079ef3b8619ea0bec759792b1af9106cd8239c925ea185810d95c10651457",
+      "bytes": 6046
+    },
+    {
+      "path": "docs/PROCESS_AUTOMATION_LOG.md",
+      "sha256": "69ba413103ebf7664e12aedff5a605a0006e912f3cc62a84166b64575bf0e8f8",
+      "bytes": 10678
+    },
+    {
+      "path": "validation/BUD_Simulator_1_1_Results_2026-10-27.json",
+      "sha256": "39b8f0340898e51f215110f8df284bf5ef3c6573ed77723ab591550cfd591f59",
+      "bytes": 9720
+    },
+    {
+      "path": "validation/BUD_Workbook_Subtotal_Results_2026-10-27.json",
+      "sha256": "a36b4aaa65b68a186e1d6e733aa5651c5955f29269d2c3be5e7ca816a3fc4a93",
+      "bytes": 6210
+    },
+    {
+      "path": "workbooks/BUD_Sprint_Cierre_Tecnico_PRUEBA_2026-10-27.xlsx",
+      "sha256": "5ede299930258af4b280835372e41c33eab6effca341c58278f7b74dc3f50aae",
+      "bytes": 228655
+    }
+  ]
+}
