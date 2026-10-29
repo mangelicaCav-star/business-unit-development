@@ -1,3 +1,13 @@
+# BUD simulator — corrective checkpoint 29 October 2026
+
+Current private version: **1.1-H02**, 65/65 JavaScript cases. The guide below describes base 1.1 and remains applicable, with this addition:
+
+Selecting an invoice displays master entity/unit/brand, snapshot date and reference resolved read-only from its Project ID. Original invoice values remain unchanged beside that reference. Unknown or duplicate master IDs are flagged. A current snapshot does not certify historical classification or authorization. This is a comparison aid, not an ERP integration or automatic import of all original columns.
+
+The owner reported correct Excel comparison and functional behavior within tested scope. [Current review and evidence](BUD_Review_2026-10-29.md). Assistant browser QA remains unavailable in this environment; Node tests and deployment are separate evidence. Source/access remain private.
+
+---
+
 # BUD — guía del simulador privado 1.1
 
 Actualización del 27 de octubre de 2026. [Abrir simulador privado](https://bud-control-simulator.humblerobin2048.chatgpt.site) con la cuenta propietaria. La versión 1.0 y sus 47 casos quedan como evidencia histórica; esta versión usa el corte sintético aceptado del workbook y 60 casos propios.
@@ -47,3 +57,4 @@ Guardar y cargar son explícitos, en este navegador. Restaurar base restablece e
 Validación ejecuta 60 casos de referencia del motor JavaScript y muestra esperado/obtenido. No evalúa si los datos editados por el usuario son auténticos. No equivale a Excel365, conciliación ERP, proveedor o Finanzas. La revisión visual de esta publicación no pudo ejecutarse por un fallo del navegador/preview; sí pasaron sintaxis y referencias DOM estáticas.
 
 Pagos, tesorería, utilidad contable, arnés independiente de seis PO, líneas de PO, EVOF, nuevos pronósticos y parking lot no forman parte del flujo activo. El acceso sigue privado. El código y los activos del simulador no se publican en GitHub público.
+

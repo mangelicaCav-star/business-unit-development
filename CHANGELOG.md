@@ -1,3 +1,7 @@
+## 29 October 2026 — advanced evidence review and portfolio refresh
+
+Publish private BUD corrective 1.1-H02 with read-only master lookup preserving invoice-source discrepancies; 65/65 Node cases. Record user-reported scoped Excel comparison and functional acceptance. Update README/guide/review and public portfolio example. Preserve workbook binary and real-data/full-native limitations.
+
 # BUD publication — 27 October 2026
 
 - Publish a new clearly marked synthetic workbook with H01/H02 integrity checks, portable Invoice month, valid-record subtotals, explicit exclusions, date formatting and accepted sheet order. Preserve the 23 October master unchanged.
@@ -41,5 +45,6 @@
 - Deferred to future development: Power BI v0.8, ERP integration and reconciliation, amendment approval evidence and FX policy.
 
 - [Sprint activity log and plan-versus-actual closeout](docs/BUD_Sprint_Activity_Log_2026-10-16.md) records deliverables, acceptance boundaries, deviations and deferred backlog.
+
 
 

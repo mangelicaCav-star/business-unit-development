@@ -4,20 +4,20 @@
 
 BUD combines daily project follow-up with monthly management reporting using ERP-sourced information. It documents an operating design informed by experience developing Strategic Services and Brands within an established industrial company. ERP remains the official system of record.
 
-## Current artifacts — 27 October 2026
+## Current artifacts — reviewed 29 October 2026
 
 | Artifact | Status | Evidence boundary |
 |---|---|---|
 | [Accepted synthetic workbook](workbooks/BUD_Sprint_Cierre_Tecnico_PRUEBA_2026-10-27.xlsx) | New dated PRUEBA copy; source values restored | 30/30 saved-file local subtotal checks from sprint closeout; scoped base/H01/H02 acceptance reported by the user in Excel365 |
 | [Current operational rules and field delta](docs/BUD_Operational_Data_Dictionary_2026-10-27.md) | Accepted cutoff and reporting behavior | Includes exclusions, missing data, original USD/MXN and PO perimeter |
 | [Workbook validation](docs/BUD_Operational_Validation_2026-10-27.md) | Evidence separated by engine | Not full native regression or real ERP reconciliation |
-| [Private simulator 1.1](https://bud-control-simulator.humblerobin2048.chatgpt.site) | Updated and deployed; owner-only | 60/60 JavaScript reference cases; browser QA unavailable in this run |
+| [Private simulator 1.1-H02](https://bud-control-simulator.humblerobin2048.chatgpt.site) | Corrective read-only master lookup deployed; owner-only | 65/65 JavaScript cases; functional acceptance / Excel comparison reported by owner within tested scope; current assistant browser QA unavailable |
 | [Previous 23 October working copy](workbooks/BUD_Operational_Working_2026-10-23.xlsx) | Preserved unchanged | Previous 31-case evidence is historical; not a substitute for final subtotal checks |
 | [Illustrated PDF manual — 23 October](docs/BUD_User_Guide_2026-10-23.pdf) | Historical manual, not updated by this release | Read the current field/rule delta and simulator guide; no claim that the PDF reflects final subtotal behavior |
 
 **[Sprint closeout](docs/BUD_Sprint_Closeout_2026-10-27.md)** · **[Publication / simulator validation](docs/BUD_Simulator_Validation_2026-10-27.md)** · **[Artifact manifest](docs/BUD_Artifact_Manifest_2026-10-27.json)**.
 
-All records are fictional and explicitly marked PRUEBA / TEST. This is a bounded validated synthetic working copy, not a data-free operational master or a production deployment. The original 23 October workbook is retained. Pending full Excel365 regression, real ERP field mapping, coverage and accumulated-total reconciliation remain open; no portfolio Site was changed.
+All records are fictional and explicitly marked PRUEBA / TEST. This is a bounded validated synthetic working copy, not a data-free operational master or a production deployment. The original 23 October workbook is retained. Pending full Excel365 regression, real ERP field mapping, coverage and accumulated-total reconciliation remain open. The portfolio was refreshed in the [29 October evidence review](docs/BUD_Review_2026-10-29.md).
 
 ## Operating purpose and conditional acceptance
 
@@ -51,11 +51,11 @@ The independent six-PO reconciliation harness was reviewed as an auxiliary test 
 
 ## Separate simulator evidence
 
-[Current simulator guide](docs/BUD_Simulator_Guide.md) · [60-case expected/obtained evidence](validation/BUD_Simulator_1_1_Results_2026-10-27.json) · [Validation and deployment limits](docs/BUD_Simulator_Validation_2026-10-27.md) · [Private simulator — owner account required](https://bud-control-simulator.humblerobin2048.chatgpt.site).
+[Current simulator guide](docs/BUD_Simulator_Guide.md) · [65-case current evidence](validation/BUD_Simulator_1_1_H02_Results_2026-10-29.json) · [Validation and deployment limits](docs/BUD_Simulator_Validation_2026-10-27.md) · [Private simulator — owner account required](https://bud-control-simulator.humblerobin2048.chatgpt.site).
 
-Simulator 1.1 replaces the earlier active exposure/payment perspective with budget versus total authorized supplier-PO value. Dated invoices now drive original-currency monthly/YTD subtotals and exclusions. The independent six-PO harness is removed from active views. Current snapshot and historical activity stay separate. Old browser-local 1.0 scenarios are retained without automatic migration.
+Simulator 1.1-H02 adds a read-only lookup of master entity/unit/brand by Project ID while preserving the original invoice values and H02 discrepancy validation. It does not certify effective-dated historical classification. Simulator 1.1 replaces the earlier active exposure/payment perspective with budget versus total authorized supplier-PO value. Dated invoices now drive original-currency monthly/YTD subtotals and exclusions. The independent six-PO harness is removed from active views. Current snapshot and historical activity stay separate. Old browser-local 1.0 scenarios are retained without automatic migration.
 
-The source and assets remain private; this public repository contains documentation, workbook and results only. The [47-case record](docs/BUD_Simulator_Validation_2026-10-22.md) belongs to version 1.0 and is retained as history. It is not added to the new 60 cases. Browser QA was attempted but not executed because the CUA kernel and preview readiness failed; JavaScript tests and static DOM-reference checks passed. Excel365 evidence is user-reported and separate.
+The source and assets remain private; this public repository contains documentation, workbook and results only. The [47-case record](docs/BUD_Simulator_Validation_2026-10-22.md) belongs to version 1.0 and is retained as history. It is not added to the current 65 cases. The previous 60-case 1.1 record is also retained as history. Browser QA was attempted but not executed because the CUA kernel and preview readiness failed; JavaScript tests and static DOM-reference checks passed. The owner subsequently reported correct BUD-versus-Excel results and correct simulator behavior within agreed scope. This is scoped user acceptance, not independently executed Excel365 or full native regression. See the [current review](docs/BUD_Review_2026-10-29.md) for version/provenance limits.
 
 ## Historical case and attribution
 
@@ -70,4 +70,5 @@ Business Unit, Brand and Selling Entity are distinct dimensions; brands subdivid
 The 23 October session closes the work already performed and its documentation. Projection of future invoicing, project start/delivery dates, new ERP integrations, Power BI, agents and company-wide financial scope are not added to this cut. The original one-hour minimum-change plan expanded and was not achieved as a tightly bounded sprint; see the closeout for the plan-versus-actual assessment. No EVOF implementation work was performed in this BUD session.
 
 [EVOF — Procurement Operations Framework](https://github.com/mangelicaCav-star/procurement-operations-framework) remains a separate portfolio project. Historical practices are reconstructed from firsthand experience, not independently audited. No confidential business data, verified ROI or production deployment is claimed.
+
 
